@@ -1,0 +1,231 @@
+{
+    "CompUnits": {
+        "amcQw_d": {
+            "mode": 4,
+            "mod": "...MASTER...",
+            "out": "objs/amcQw_d.o",
+            "bytes": 8921,
+            "checksum": 0
+        },
+        "hEeZs_d": {
+            "mode": 4,
+            "mod": "vcs_paramclassrepository",
+            "out": "hEeZs_d.o",
+            "bytes": 7277707,
+            "archive": "archive.0/_6176_archive_1.a",
+            "checksum": 0
+        },
+        "hNLvh_d": {
+            "mode": 4,
+            "mod": "_vcs_unit__111909586",
+            "out": "hNLvh_d.o",
+            "bytes": 298835,
+            "archive": "archive.0/_6176_archive_1.a",
+            "checksum": 0
+        },
+        "reYIK_d": {
+            "mode": 4,
+            "mod": "std",
+            "out": "reYIK_d.o",
+            "bytes": 42922,
+            "archive": "archive.0/_6176_archive_1.a",
+            "checksum": 0
+        },
+        "nhiwz_d": {
+            "mode": 4,
+            "mod": "uvm_custom_install_recording",
+            "out": "nhiwz_d.o",
+            "bytes": 29171,
+            "archive": "archive.0/_6176_archive_1.a",
+            "checksum": 0
+        },
+        "uM9F1_d": {
+            "mode": 4,
+            "mod": "_vcs_DPI_package",
+            "out": "uM9F1_d.o",
+            "bytes": 9927,
+            "archive": "archive.0/_6176_archive_1.a",
+            "checksum": 0
+        },
+        "zr7M1_d": {
+            "mode": 4,
+            "mod": "uvm_pkg",
+            "out": "zr7M1_d.o",
+            "bytes": 7034328,
+            "archive": "archive.0/_6176_archive_1.a",
+            "checksum": 0
+        },
+        "EtDq0_d": {
+            "mode": 4,
+            "mod": "apb_wrapper",
+            "out": "EtDq0_d.o",
+            "bytes": 273123,
+            "archive": "archive.0/_6176_archive_1.a",
+            "checksum": 0
+        },
+        "zQBzV_d": {
+            "mode": 4,
+            "mod": "_vcs_msglog",
+            "out": "zQBzV_d.o",
+            "bytes": 10799,
+            "archive": "archive.0/_6176_archive_1.a",
+            "checksum": 0
+        },
+        "L0K7q_d": {
+            "mode": 4,
+            "mod": "apb_fsm",
+            "out": "L0K7q_d.o",
+            "bytes": 21211,
+            "archive": "archive.0/_6176_archive_1.a",
+            "checksum": 0
+        },
+        "f6b33_d": {
+            "mode": 4,
+            "mod": "err_gen",
+            "out": "f6b33_d.o",
+            "bytes": 12513,
+            "archive": "archive.0/_6176_archive_1.a",
+            "checksum": 0
+        },
+        "d9vZk_d": {
+            "mode": 4,
+            "mod": "apb_if",
+            "out": "d9vZk_d.o",
+            "bytes": 14456,
+            "archive": "archive.0/_6176_archive_1.a",
+            "checksum": 0
+        },
+        "xtRSS_d": {
+            "mode": 4,
+            "mod": "apb_pkg",
+            "out": "xtRSS_d.o",
+            "bytes": 434520,
+            "archive": "archive.0/_6176_archive_1.a",
+            "checksum": 0
+        },
+        "jdPWL_d": {
+            "mode": 4,
+            "mod": "tb_top",
+            "out": "jdPWL_d.o",
+            "bytes": 20983,
+            "archive": "archive.0/_6176_archive_1.a",
+            "checksum": 0
+        }
+    },
+    "Modules": {
+        "...MASTER...": {},
+        "vcs_paramclassrepository": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "uvm_custom_install_recording": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "err_gen": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "_vcs_DPI_package": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "_vcs_unit__111909586": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "apb_fsm": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "uvm_pkg": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "_vcs_msglog": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "apb_wrapper": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "apb_if": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "apb_pkg": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "tb_top": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        }
+    },
+    "reusePaths": {},
+    "ObjArchives": [
+        {
+            "archive": "archive.0/_6176_archive_1.a",
+            "objects": [
+                [
+                    "hEeZs_d.o",
+                    7277707
+                ],
+                [
+                    "uM9F1_d.o",
+                    9927
+                ],
+                [
+                    "hNLvh_d.o",
+                    298835
+                ],
+                [
+                    "reYIK_d.o",
+                    42922
+                ],
+                [
+                    "zr7M1_d.o",
+                    7034328
+                ],
+                [
+                    "zQBzV_d.o",
+                    10799
+                ],
+                [
+                    "nhiwz_d.o",
+                    29171
+                ],
+                [
+                    "L0K7q_d.o",
+                    21211
+                ],
+                [
+                    "f6b33_d.o",
+                    12513
+                ],
+                [
+                    "EtDq0_d.o",
+                    273123
+                ],
+                [
+                    "d9vZk_d.o",
+                    14456
+                ],
+                [
+                    "xtRSS_d.o",
+                    434520
+                ],
+                [
+                    "jdPWL_d.o",
+                    20983
+                ]
+            ],
+            "size": 15480495
+        }
+    ]
+}

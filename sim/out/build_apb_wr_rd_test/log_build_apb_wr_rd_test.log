@@ -1,0 +1,614 @@
+
+Note-[RT_BS] Larger stack needed
+  Note: Bumping stack limit from 8192 to 8250 Kbytes.
+
+Chronologic VCS simulator copyright 1991-2016
+Contains Synopsys proprietary information.
+Compiler version L-2016.06_Full64; Runtime version L-2016.06_Full64;  Oct  4 21:11 2026
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+
+ VCS Coverage Metrics Release L-2016.06_Full64 Copyright (c) 1991-2016 by Synopsys Inc.
+UVM_INFO ../tb/apb_top.sv(44) @ 0: reporter [TB_TOP] Starting UVM Test ...
+UVM_INFO @ 0: reporter [RNTST] Running test apb_wr_rd_test...
+VCD+ Writer L-2016.06_Full64 Copyright (c) 1991-2016 by Synopsys Inc.
+UVM_INFO @ 0: reporter [TIMOUTSET] '+UVM_TIMEOUT=9200000' provided on the command line is being applied.
+UVM_INFO ../tb/apb_test.sv(35) @ 0: uvm_test_top [apb_wr_rd_test] Test build phase
+UVM_INFO ../tb/apb_env.sv(13) @ 0: uvm_test_top.env [apb_env] Env build phase
+
+Note-[FCICIO] Instance coverage is ON
+/mnt/mydata/APB_UVM/sim/../tb/apb_coverage.sv, 28
+apb_pkg, "apb_pkg::apb_coverage::cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'apb_pkg::apb_coverage::cg'
+  
+  Covergroup Instance: tb_top.me.obj.cg 
+  Design hierarchy: apb_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/mnt/mydata/APB_UVM/sim/../tb/apb_coverage.sv, 86
+apb_pkg, "apb_pkg::apb_coverage::cg_b2b"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'apb_pkg::apb_coverage::cg_b2b'
+  
+  Covergroup Instance: tb_top.me.obj.cg_b2b 
+  Design hierarchy: apb_pkg
+
+UVM_INFO ../tb/apb_agent.sv(13) @ 0: uvm_test_top.env.agent [apb_agent] Agent build phase
+UVM_INFO ../tb/apb_sequencer.sv(6) @ 0: uvm_test_top.env.agent.sequencer [apb_sequencer] sequence build phase
+UVM_INFO ../tb/apb_driver.sv(11) @ 0: uvm_test_top.env.agent.driver [apb_driver] Driver build phase
+UVM_INFO ../tb/apb_monitor.sv(12) @ 0: uvm_test_top.env.agent.monitor [apb_mon] apb_mon build phase
+UVM_INFO ../tb/apb_env.sv(21) @ 0: uvm_test_top.env [apb_env] Env connect phase
+--------------------------------------------------------------
+Name                       Type                    Size  Value
+--------------------------------------------------------------
+uvm_test_top               apb_wr_rd_test          -     @343 
+  env                      apb_env                 -     @358 
+    agent                  apb_agent               -     @377 
+      driver               apb_driver              -     @417 
+        rsp_port           uvm_analysis_port       -     @436 
+        seq_item_port      uvm_seq_item_pull_port  -     @426 
+      monitor              apb_mon                 -     @585 
+        ap                 uvm_analysis_port       -     @597 
+      sequencer            apb_sequencer           -     @446 
+        rsp_export         uvm_analysis_export     -     @455 
+        seq_item_export    uvm_seq_item_pull_imp   -     @573 
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+    cov                    apb_coverage            -     @395 
+      analysis_imp         uvm_analysis_imp        -     @404 
+    scb                    apb_scoreboard          -     @386 
+      item_export          uvm_analysis_imp        -     @616 
+--------------------------------------------------------------
+UVM_INFO ../tb/apb_driver.sv(17) @ 0: uvm_test_top.env.agent.driver [apb_driver] Driver run phase started 
+UVM_INFO ../tb/apb_monitor.sv(18) @ 0: uvm_test_top.env.agent.monitor [apb_mon] apb_mon run phase started 
+UVM_INFO ../tb/apb_test.sv(42) @ 0: uvm_test_top [apb_wr_rd_test] Test run phase
+UVM_INFO ../tb/apb_wr_rd_test.sv(16) @ 0: uvm_test_top.env.agent.sequencer@@seq [apb_wr_rd_seq] Read Write Sequence Started :
+UVM_INFO ../tb/apb_driver.sv(20) @ 0: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x3158 | write = 1 | wdata = 0x0479645efa5c6307 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 65: uvm_test_top.env.agent.monitor [Monitor] addr : 0x3158 | write : 1 | wdata : 0x479645efa5c6307 
+UVM_INFO ../tb/apb_driver.sv(20) @ 65: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x3158 | write = 0 | wdata = 0x0c769898e8a5ef3f0 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 125: uvm_test_top.env.agent.monitor [Monitor] addr : 0x3158 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 125: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x76a8 | write = 1 | wdata = 0x09f868cdd882db7b5 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 185: uvm_test_top.env.agent.monitor [Monitor] addr : 0x76a8 | write : 1 | wdata : 0x9f868cdd882db7b5 
+UVM_INFO ../tb/apb_driver.sv(20) @ 185: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x76a8 | write = 0 | wdata = 0x0a90ae6884c08b960 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 245: uvm_test_top.env.agent.monitor [Monitor] addr : 0x76a8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 245: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xe490 | write = 1 | wdata = 0x0d5357affa01cae03 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 305: uvm_test_top.env.agent.monitor [Monitor] addr : 0xe490 | write : 1 | wdata : 0xd5357affa01cae03 
+UVM_INFO ../tb/apb_driver.sv(20) @ 305: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xe490 | write = 0 | wdata = 0x02e4dec9e78be5622 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 365: uvm_test_top.env.agent.monitor [Monitor] addr : 0xe490 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 365: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x78f0 | write = 1 | wdata = 0x04a3cb8b57bb1ebf1 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 425: uvm_test_top.env.agent.monitor [Monitor] addr : 0x78f0 | write : 1 | wdata : 0x4a3cb8b57bb1ebf1 
+UVM_INFO ../tb/apb_driver.sv(20) @ 425: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x78f0 | write = 0 | wdata = 0x0bc372bc0d5d40819 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 485: uvm_test_top.env.agent.monitor [Monitor] addr : 0x78f0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 485: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x3228 | write = 1 | wdata = 0x0dc936e82597befef 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 545: uvm_test_top.env.agent.monitor [Monitor] addr : 0x3228 | write : 1 | wdata : 0xdc936e82597befef 
+UVM_INFO ../tb/apb_driver.sv(20) @ 545: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x3228 | write = 0 | wdata = 0x0c81e8014c21d4959 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 605: uvm_test_top.env.agent.monitor [Monitor] addr : 0x3228 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 605: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x28a8 | write = 1 | wdata = 0x0ffb146cd6a1d7576 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 665: uvm_test_top.env.agent.monitor [Monitor] addr : 0x28a8 | write : 1 | wdata : 0xffb146cd6a1d7576 
+UVM_INFO ../tb/apb_driver.sv(20) @ 665: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x28a8 | write = 0 | wdata = 0x0ebc43fc52180915f 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 725: uvm_test_top.env.agent.monitor [Monitor] addr : 0x28a8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 725: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xd468 | write = 1 | wdata = 0x06f97f9fd5331c497 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 785: uvm_test_top.env.agent.monitor [Monitor] addr : 0xd468 | write : 1 | wdata : 0x6f97f9fd5331c497 
+UVM_INFO ../tb/apb_driver.sv(20) @ 785: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xd468 | write = 0 | wdata = 0x03d45a9d2a347626d 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 845: uvm_test_top.env.agent.monitor [Monitor] addr : 0xd468 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 845: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xca80 | write = 1 | wdata = 0x01c7e4ad513a0e8c8 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 905: uvm_test_top.env.agent.monitor [Monitor] addr : 0xca80 | write : 1 | wdata : 0x1c7e4ad513a0e8c8 
+UVM_INFO ../tb/apb_driver.sv(20) @ 905: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xca80 | write = 0 | wdata = 0x0b608c5bc1de81b81 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 965: uvm_test_top.env.agent.monitor [Monitor] addr : 0xca80 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 965: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x3660 | write = 1 | wdata = 0x0dd810cff209c329d 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1025: uvm_test_top.env.agent.monitor [Monitor] addr : 0x3660 | write : 1 | wdata : 0xdd810cff209c329d 
+UVM_INFO ../tb/apb_driver.sv(20) @ 1025: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x3660 | write = 0 | wdata = 0x0ec77d39cd0b347cb 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1085: uvm_test_top.env.agent.monitor [Monitor] addr : 0x3660 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 1085: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xdd40 | write = 1 | wdata = 0x0c667bdf57e3ae83c 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1145: uvm_test_top.env.agent.monitor [Monitor] addr : 0xdd40 | write : 1 | wdata : 0xc667bdf57e3ae83c 
+UVM_INFO ../tb/apb_driver.sv(20) @ 1145: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xdd40 | write = 0 | wdata = 0x0cab2d1ef77e4e24d 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1205: uvm_test_top.env.agent.monitor [Monitor] addr : 0xdd40 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 1205: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x9958 | write = 1 | wdata = 0x0cc0b34343a38c496 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1265: uvm_test_top.env.agent.monitor [Monitor] addr : 0x9958 | write : 1 | wdata : 0xcc0b34343a38c496 
+UVM_INFO ../tb/apb_driver.sv(20) @ 1265: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x9958 | write = 0 | wdata = 0x0c94e3db740a84b91 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1325: uvm_test_top.env.agent.monitor [Monitor] addr : 0x9958 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 1325: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xc558 | write = 1 | wdata = 0x0fa62b5b93f7f7493 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1385: uvm_test_top.env.agent.monitor [Monitor] addr : 0xc558 | write : 1 | wdata : 0xfa62b5b93f7f7493 
+UVM_INFO ../tb/apb_driver.sv(20) @ 1385: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xc558 | write = 0 | wdata = 0x01f23680158259bcc 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1445: uvm_test_top.env.agent.monitor [Monitor] addr : 0xc558 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 1445: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xf130 | write = 1 | wdata = 0x034f44443c4af9ae0 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1505: uvm_test_top.env.agent.monitor [Monitor] addr : 0xf130 | write : 1 | wdata : 0x34f44443c4af9ae0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 1505: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xf130 | write = 0 | wdata = 0x04d4b31c84986f236 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1565: uvm_test_top.env.agent.monitor [Monitor] addr : 0xf130 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 1565: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xb098 | write = 1 | wdata = 0x0c358de4a1c94a5ac 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1625: uvm_test_top.env.agent.monitor [Monitor] addr : 0xb098 | write : 1 | wdata : 0xc358de4a1c94a5ac 
+UVM_INFO ../tb/apb_driver.sv(20) @ 1625: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xb098 | write = 0 | wdata = 0x0591200af5d425a6 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1685: uvm_test_top.env.agent.monitor [Monitor] addr : 0xb098 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 1685: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xa000 | write = 1 | wdata = 0x06cbe552f0bf62939 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1745: uvm_test_top.env.agent.monitor [Monitor] addr : 0xa000 | write : 1 | wdata : 0x6cbe552f0bf62939 
+UVM_INFO ../tb/apb_driver.sv(20) @ 1745: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xa000 | write = 0 | wdata = 0x05d619b82929c082f 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1805: uvm_test_top.env.agent.monitor [Monitor] addr : 0xa000 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 1805: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x26d8 | write = 1 | wdata = 0x0f0a29d7a322a6602 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1865: uvm_test_top.env.agent.monitor [Monitor] addr : 0x26d8 | write : 1 | wdata : 0xf0a29d7a322a6602 
+UVM_INFO ../tb/apb_driver.sv(20) @ 1865: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x26d8 | write = 0 | wdata = 0x0e154eba11a6240f9 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1925: uvm_test_top.env.agent.monitor [Monitor] addr : 0x26d8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 1925: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xa498 | write = 1 | wdata = 0x0ef05ff9b2a73f0b2 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1985: uvm_test_top.env.agent.monitor [Monitor] addr : 0xa498 | write : 1 | wdata : 0xef05ff9b2a73f0b2 
+UVM_INFO ../tb/apb_driver.sv(20) @ 1985: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xa498 | write = 0 | wdata = 0x0893e305f067f4ca1 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2045: uvm_test_top.env.agent.monitor [Monitor] addr : 0xa498 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 2045: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xd7a8 | write = 1 | wdata = 0x0542eae2f8c980593 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2105: uvm_test_top.env.agent.monitor [Monitor] addr : 0xd7a8 | write : 1 | wdata : 0x542eae2f8c980593 
+UVM_INFO ../tb/apb_driver.sv(20) @ 2105: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xd7a8 | write = 0 | wdata = 0x05098ff60a47ffaa8 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2165: uvm_test_top.env.agent.monitor [Monitor] addr : 0xd7a8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 2165: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1c30 | write = 1 | wdata = 0x0b5e449e29e86869c 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2225: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1c30 | write : 1 | wdata : 0xb5e449e29e86869c 
+UVM_INFO ../tb/apb_driver.sv(20) @ 2225: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1c30 | write = 0 | wdata = 0x095f79b6c14f83a86 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2285: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1c30 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 2285: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xff0 | write = 1 | wdata = 0x07b6f44c21e2c1fb6 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2345: uvm_test_top.env.agent.monitor [Monitor] addr : 0xff0 | write : 1 | wdata : 0x7b6f44c21e2c1fb6 
+UVM_INFO ../tb/apb_driver.sv(20) @ 2345: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xff0 | write = 0 | wdata = 0x01dfa34084fa86425 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2405: uvm_test_top.env.agent.monitor [Monitor] addr : 0xff0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 2405: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xb1c0 | write = 1 | wdata = 0x080a48877fe1f5890 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2465: uvm_test_top.env.agent.monitor [Monitor] addr : 0xb1c0 | write : 1 | wdata : 0x80a48877fe1f5890 
+UVM_INFO ../tb/apb_driver.sv(20) @ 2465: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xb1c0 | write = 0 | wdata = 0x0547243b1a0a27a17 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2525: uvm_test_top.env.agent.monitor [Monitor] addr : 0xb1c0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 2525: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x6b40 | write = 1 | wdata = 0x02ab0113801cabbc3 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2585: uvm_test_top.env.agent.monitor [Monitor] addr : 0x6b40 | write : 1 | wdata : 0x2ab0113801cabbc3 
+UVM_INFO ../tb/apb_driver.sv(20) @ 2585: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x6b40 | write = 0 | wdata = 0x0a09994f436d72d 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2645: uvm_test_top.env.agent.monitor [Monitor] addr : 0x6b40 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 2645: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x49b8 | write = 1 | wdata = 0x0e6665dc009988902 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2705: uvm_test_top.env.agent.monitor [Monitor] addr : 0x49b8 | write : 1 | wdata : 0xe6665dc009988902 
+UVM_INFO ../tb/apb_driver.sv(20) @ 2705: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x49b8 | write = 0 | wdata = 0x068e5694722049076 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2765: uvm_test_top.env.agent.monitor [Monitor] addr : 0x49b8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 2765: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xe708 | write = 1 | wdata = 0x0438b9d1e93edcbdb 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2825: uvm_test_top.env.agent.monitor [Monitor] addr : 0xe708 | write : 1 | wdata : 0x438b9d1e93edcbdb 
+UVM_INFO ../tb/apb_driver.sv(20) @ 2825: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xe708 | write = 0 | wdata = 0x0205d06ceffbfb474 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2885: uvm_test_top.env.agent.monitor [Monitor] addr : 0xe708 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 2885: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x7408 | write = 1 | wdata = 0x07e91c3b71f075506 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2945: uvm_test_top.env.agent.monitor [Monitor] addr : 0x7408 | write : 1 | wdata : 0x7e91c3b71f075506 
+UVM_INFO ../tb/apb_driver.sv(20) @ 2945: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x7408 | write = 0 | wdata = 0x0d9d99b17fd523965 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3005: uvm_test_top.env.agent.monitor [Monitor] addr : 0x7408 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 3005: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x6cb0 | write = 1 | wdata = 0x0f843b7f7f4e933e1 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3065: uvm_test_top.env.agent.monitor [Monitor] addr : 0x6cb0 | write : 1 | wdata : 0xf843b7f7f4e933e1 
+UVM_INFO ../tb/apb_driver.sv(20) @ 3065: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x6cb0 | write = 0 | wdata = 0x0c1d111cb047050e3 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3125: uvm_test_top.env.agent.monitor [Monitor] addr : 0x6cb0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 3125: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x9888 | write = 1 | wdata = 0x014dbacc01e6262a4 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3185: uvm_test_top.env.agent.monitor [Monitor] addr : 0x9888 | write : 1 | wdata : 0x14dbacc01e6262a4 
+UVM_INFO ../tb/apb_driver.sv(20) @ 3185: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x9888 | write = 0 | wdata = 0x052a2474ed4915017 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3245: uvm_test_top.env.agent.monitor [Monitor] addr : 0x9888 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 3245: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x9e10 | write = 1 | wdata = 0x06a30aa0ed44408bd 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3305: uvm_test_top.env.agent.monitor [Monitor] addr : 0x9e10 | write : 1 | wdata : 0x6a30aa0ed44408bd 
+UVM_INFO ../tb/apb_driver.sv(20) @ 3305: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x9e10 | write = 0 | wdata = 0x0114ee3ce2830b76 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3365: uvm_test_top.env.agent.monitor [Monitor] addr : 0x9e10 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 3365: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x86a0 | write = 1 | wdata = 0x0fd36615fbdadd2d2 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3425: uvm_test_top.env.agent.monitor [Monitor] addr : 0x86a0 | write : 1 | wdata : 0xfd36615fbdadd2d2 
+UVM_INFO ../tb/apb_driver.sv(20) @ 3425: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x86a0 | write = 0 | wdata = 0x01b265f791a1d81b8 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3485: uvm_test_top.env.agent.monitor [Monitor] addr : 0x86a0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 3485: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xd6d0 | write = 1 | wdata = 0x0142a2d8d36178215 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3545: uvm_test_top.env.agent.monitor [Monitor] addr : 0xd6d0 | write : 1 | wdata : 0x142a2d8d36178215 
+UVM_INFO ../tb/apb_driver.sv(20) @ 3545: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xd6d0 | write = 0 | wdata = 0x09d048c808e7717b5 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3605: uvm_test_top.env.agent.monitor [Monitor] addr : 0xd6d0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 3605: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xf318 | write = 1 | wdata = 0x0ba00471ade793564 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3665: uvm_test_top.env.agent.monitor [Monitor] addr : 0xf318 | write : 1 | wdata : 0xba00471ade793564 
+UVM_INFO ../tb/apb_driver.sv(20) @ 3665: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xf318 | write = 0 | wdata = 0x03c6a74f40d610461 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3725: uvm_test_top.env.agent.monitor [Monitor] addr : 0xf318 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 3725: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xc6e8 | write = 1 | wdata = 0x092682b264ade1513 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3785: uvm_test_top.env.agent.monitor [Monitor] addr : 0xc6e8 | write : 1 | wdata : 0x92682b264ade1513 
+UVM_INFO ../tb/apb_driver.sv(20) @ 3785: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xc6e8 | write = 0 | wdata = 0x07266a4e355534902 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3845: uvm_test_top.env.agent.monitor [Monitor] addr : 0xc6e8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 3845: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x2f90 | write = 1 | wdata = 0x08e378e772f14d079 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3905: uvm_test_top.env.agent.monitor [Monitor] addr : 0x2f90 | write : 1 | wdata : 0x8e378e772f14d079 
+UVM_INFO ../tb/apb_driver.sv(20) @ 3905: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x2f90 | write = 0 | wdata = 0x07d1cf06b79ce77a6 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3965: uvm_test_top.env.agent.monitor [Monitor] addr : 0x2f90 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 3965: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x3a00 | write = 1 | wdata = 0x0d12585621fba1a61 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4025: uvm_test_top.env.agent.monitor [Monitor] addr : 0x3a00 | write : 1 | wdata : 0xd12585621fba1a61 
+UVM_INFO ../tb/apb_driver.sv(20) @ 4025: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x3a00 | write = 0 | wdata = 0x0efa1ba78d2b8c515 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4085: uvm_test_top.env.agent.monitor [Monitor] addr : 0x3a00 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 4085: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xb998 | write = 1 | wdata = 0x0930daf5a22d87e83 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4145: uvm_test_top.env.agent.monitor [Monitor] addr : 0xb998 | write : 1 | wdata : 0x930daf5a22d87e83 
+UVM_INFO ../tb/apb_driver.sv(20) @ 4145: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xb998 | write = 0 | wdata = 0x08df37964f9eb322f 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4205: uvm_test_top.env.agent.monitor [Monitor] addr : 0xb998 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 4205: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x5638 | write = 1 | wdata = 0x0b49c34e2c306c141 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4265: uvm_test_top.env.agent.monitor [Monitor] addr : 0x5638 | write : 1 | wdata : 0xb49c34e2c306c141 
+UVM_INFO ../tb/apb_driver.sv(20) @ 4265: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x5638 | write = 0 | wdata = 0x03e049ca9e920b202 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4325: uvm_test_top.env.agent.monitor [Monitor] addr : 0x5638 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 4325: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x41a8 | write = 1 | wdata = 0x0261565524932913b 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4385: uvm_test_top.env.agent.monitor [Monitor] addr : 0x41a8 | write : 1 | wdata : 0x261565524932913b 
+UVM_INFO ../tb/apb_driver.sv(20) @ 4385: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x41a8 | write = 0 | wdata = 0x0c4db12e3ea881e0b 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4445: uvm_test_top.env.agent.monitor [Monitor] addr : 0x41a8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 4445: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x2dd0 | write = 1 | wdata = 0x09b34a706553b0abd 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4505: uvm_test_top.env.agent.monitor [Monitor] addr : 0x2dd0 | write : 1 | wdata : 0x9b34a706553b0abd 
+UVM_INFO ../tb/apb_driver.sv(20) @ 4505: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x2dd0 | write = 0 | wdata = 0x080b4ec29a8d7d9e1 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4565: uvm_test_top.env.agent.monitor [Monitor] addr : 0x2dd0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 4565: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xd228 | write = 1 | wdata = 0x0fc800605278f4679 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4625: uvm_test_top.env.agent.monitor [Monitor] addr : 0xd228 | write : 1 | wdata : 0xfc800605278f4679 
+UVM_INFO ../tb/apb_driver.sv(20) @ 4625: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xd228 | write = 0 | wdata = 0x03e4be6c2ba44f7b7 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4685: uvm_test_top.env.agent.monitor [Monitor] addr : 0xd228 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 4685: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xb888 | write = 1 | wdata = 0x0daec85f2dadfd95c 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4745: uvm_test_top.env.agent.monitor [Monitor] addr : 0xb888 | write : 1 | wdata : 0xdaec85f2dadfd95c 
+UVM_INFO ../tb/apb_driver.sv(20) @ 4745: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xb888 | write = 0 | wdata = 0x0e37b5888cf8f79ff 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4805: uvm_test_top.env.agent.monitor [Monitor] addr : 0xb888 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 4805: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xe880 | write = 1 | wdata = 0x07bac438bb12c36bb 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4865: uvm_test_top.env.agent.monitor [Monitor] addr : 0xe880 | write : 1 | wdata : 0x7bac438bb12c36bb 
+UVM_INFO ../tb/apb_driver.sv(20) @ 4865: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xe880 | write = 0 | wdata = 0x0cffae37c42594c74 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4925: uvm_test_top.env.agent.monitor [Monitor] addr : 0xe880 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 4925: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xd5a0 | write = 1 | wdata = 0x0fae2e8d54db73b51 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4985: uvm_test_top.env.agent.monitor [Monitor] addr : 0xd5a0 | write : 1 | wdata : 0xfae2e8d54db73b51 
+UVM_INFO ../tb/apb_driver.sv(20) @ 4985: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xd5a0 | write = 0 | wdata = 0x086bc8429a4ecbb68 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5045: uvm_test_top.env.agent.monitor [Monitor] addr : 0xd5a0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 5045: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xb18 | write = 1 | wdata = 0x01e5357ab7f59e97f 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5105: uvm_test_top.env.agent.monitor [Monitor] addr : 0xb18 | write : 1 | wdata : 0x1e5357ab7f59e97f 
+UVM_INFO ../tb/apb_driver.sv(20) @ 5105: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xb18 | write = 0 | wdata = 0x0a22d1dfa5b4d9205 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5165: uvm_test_top.env.agent.monitor [Monitor] addr : 0xb18 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 5165: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xa548 | write = 1 | wdata = 0x0d5ded7fbc93bcb11 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5225: uvm_test_top.env.agent.monitor [Monitor] addr : 0xa548 | write : 1 | wdata : 0xd5ded7fbc93bcb11 
+UVM_INFO ../tb/apb_driver.sv(20) @ 5225: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xa548 | write = 0 | wdata = 0x02e20f1877a15a7cc 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5285: uvm_test_top.env.agent.monitor [Monitor] addr : 0xa548 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 5285: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x9020 | write = 1 | wdata = 0x026e0a877bb2d0a74 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5345: uvm_test_top.env.agent.monitor [Monitor] addr : 0x9020 | write : 1 | wdata : 0x26e0a877bb2d0a74 
+UVM_INFO ../tb/apb_driver.sv(20) @ 5345: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x9020 | write = 0 | wdata = 0x02f124b33a5d8f218 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5405: uvm_test_top.env.agent.monitor [Monitor] addr : 0x9020 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 5405: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x89a8 | write = 1 | wdata = 0x0561775fccdf2f684 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5465: uvm_test_top.env.agent.monitor [Monitor] addr : 0x89a8 | write : 1 | wdata : 0x561775fccdf2f684 
+UVM_INFO ../tb/apb_driver.sv(20) @ 5465: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x89a8 | write = 0 | wdata = 0x04178261c45980039 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5525: uvm_test_top.env.agent.monitor [Monitor] addr : 0x89a8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 5525: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x12b8 | write = 1 | wdata = 0x0244079bc57240cf1 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5585: uvm_test_top.env.agent.monitor [Monitor] addr : 0x12b8 | write : 1 | wdata : 0x244079bc57240cf1 
+UVM_INFO ../tb/apb_driver.sv(20) @ 5585: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x12b8 | write = 0 | wdata = 0x0844096089e67fa69 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5645: uvm_test_top.env.agent.monitor [Monitor] addr : 0x12b8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 5645: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x3090 | write = 1 | wdata = 0x041124a826c9e9140 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5705: uvm_test_top.env.agent.monitor [Monitor] addr : 0x3090 | write : 1 | wdata : 0x41124a826c9e9140 
+UVM_INFO ../tb/apb_driver.sv(20) @ 5705: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x3090 | write = 0 | wdata = 0x0b37671e4cff4e727 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5765: uvm_test_top.env.agent.monitor [Monitor] addr : 0x3090 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 5765: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x7810 | write = 1 | wdata = 0x09f4087c7a0e8871f 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5825: uvm_test_top.env.agent.monitor [Monitor] addr : 0x7810 | write : 1 | wdata : 0x9f4087c7a0e8871f 
+UVM_INFO ../tb/apb_driver.sv(20) @ 5825: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x7810 | write = 0 | wdata = 0x0b6f778a569b3885b 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5885: uvm_test_top.env.agent.monitor [Monitor] addr : 0x7810 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 5885: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xeab0 | write = 1 | wdata = 0x0e03825684958b9d3 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5945: uvm_test_top.env.agent.monitor [Monitor] addr : 0xeab0 | write : 1 | wdata : 0xe03825684958b9d3 
+UVM_INFO ../tb/apb_driver.sv(20) @ 5945: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xeab0 | write = 0 | wdata = 0x0d0c5fb38a4e0e252 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6005: uvm_test_top.env.agent.monitor [Monitor] addr : 0xeab0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 6005: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 1 | wdata = 0x09d92524f7a4d985a 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6065: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 1 | wdata : 0x9d92524f7a4d985a 
+UVM_INFO ../tb/apb_driver.sv(20) @ 6065: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 0 | wdata = 0x0a1541f83b7921453 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6125: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 6125: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 1 | wdata = 0x0ed7065eb0494b0d9 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6185: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 1 | wdata : 0xed7065eb0494b0d9 
+UVM_INFO ../tb/apb_driver.sv(20) @ 6185: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 0 | wdata = 0x0c7dd65b1e440672 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6245: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 6245: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 1 | wdata = 0x06c95b478f29493dd 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6305: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 1 | wdata : 0x6c95b478f29493dd 
+UVM_INFO ../tb/apb_driver.sv(20) @ 6305: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 0 | wdata = 0x084f80c6a8a6b0af8 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6365: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 6365: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x0 | write = 1 | wdata = 0x025dec283771938c7 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6425: uvm_test_top.env.agent.monitor [Monitor] addr : 0x0 | write : 1 | wdata : 0x25dec283771938c7 
+UVM_INFO ../tb/apb_driver.sv(20) @ 6425: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x0 | write = 0 | wdata = 0x06c206cfbf1d5ef94 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6485: uvm_test_top.env.agent.monitor [Monitor] addr : 0x0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 6485: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 1 | wdata = 0x0f4684b9aed9d413 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6545: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 1 | wdata : 0xf4684b9aed9d413 
+UVM_INFO ../tb/apb_driver.sv(20) @ 6545: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 0 | wdata = 0x027930d40b0cf60e2 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6605: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 6605: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 1 | wdata = 0x0d0a8db6b3d0a44c8 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6665: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 1 | wdata : 0xd0a8db6b3d0a44c8 
+UVM_INFO ../tb/apb_driver.sv(20) @ 6665: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 0 | wdata = 0x06d38fac7a180c5b0 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6725: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 6725: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 1 | wdata = 0x084cf07ed6d2621f1 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6785: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 1 | wdata : 0x84cf07ed6d2621f1 
+UVM_INFO ../tb/apb_driver.sv(20) @ 6785: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 0 | wdata = 0x06bad71efb28609e7 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6845: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 6845: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 1 | wdata = 0x0f48a351cf4fddee7 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6905: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 1 | wdata : 0xf48a351cf4fddee7 
+UVM_INFO ../tb/apb_driver.sv(20) @ 6905: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 0 | wdata = 0x0e52f5f5dc1c63738 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6965: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 6965: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xfff8 | write = 1 | wdata = 0x0153993887e8ead59 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7025: uvm_test_top.env.agent.monitor [Monitor] addr : 0xfff8 | write : 1 | wdata : 0x153993887e8ead59 
+UVM_INFO ../tb/apb_driver.sv(20) @ 7025: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xfff8 | write = 0 | wdata = 0x0f014566e69213fcc 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7085: uvm_test_top.env.agent.monitor [Monitor] addr : 0xfff8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 7085: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xfff8 | write = 1 | wdata = 0x0b3fd68e1219f6992 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7145: uvm_test_top.env.agent.monitor [Monitor] addr : 0xfff8 | write : 1 | wdata : 0xb3fd68e1219f6992 
+UVM_INFO ../tb/apb_driver.sv(20) @ 7145: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xfff8 | write = 0 | wdata = 0x0a65d62292cea3fa 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7205: uvm_test_top.env.agent.monitor [Monitor] addr : 0xfff8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 7205: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x0 | write = 1 | wdata = 0x0412760396290b798 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7265: uvm_test_top.env.agent.monitor [Monitor] addr : 0x0 | write : 1 | wdata : 0x412760396290b798 
+UVM_INFO ../tb/apb_driver.sv(20) @ 7265: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x0 | write = 0 | wdata = 0x0df5e23bb145b403b 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7325: uvm_test_top.env.agent.monitor [Monitor] addr : 0x0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 7325: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xfff8 | write = 1 | wdata = 0x09f17856febc7b2cc 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7385: uvm_test_top.env.agent.monitor [Monitor] addr : 0xfff8 | write : 1 | wdata : 0x9f17856febc7b2cc 
+UVM_INFO ../tb/apb_driver.sv(20) @ 7385: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xfff8 | write = 0 | wdata = 0x0de0ec220cb1043d1 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7445: uvm_test_top.env.agent.monitor [Monitor] addr : 0xfff8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 7445: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xfff8 | write = 1 | wdata = 0x0ce382878e06a886d 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7505: uvm_test_top.env.agent.monitor [Monitor] addr : 0xfff8 | write : 1 | wdata : 0xce382878e06a886d 
+UVM_INFO ../tb/apb_driver.sv(20) @ 7505: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xfff8 | write = 0 | wdata = 0x0460fa17c73b3a24c 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7565: uvm_test_top.env.agent.monitor [Monitor] addr : 0xfff8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 7565: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x0 | write = 1 | wdata = 0x0e90c871b406fd7ce 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7625: uvm_test_top.env.agent.monitor [Monitor] addr : 0x0 | write : 1 | wdata : 0xe90c871b406fd7ce 
+UVM_INFO ../tb/apb_driver.sv(20) @ 7625: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x0 | write = 0 | wdata = 0x0db7b8b1d6a127182 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7685: uvm_test_top.env.agent.monitor [Monitor] addr : 0x0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 7685: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 1 | wdata = 0x0f14cb56bc5bb41d6 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7745: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 1 | wdata : 0xf14cb56bc5bb41d6 
+UVM_INFO ../tb/apb_driver.sv(20) @ 7745: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 0 | wdata = 0x04d722d0903757b9e 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7805: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 7805: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 1 | wdata = 0x0afd09e42ce5e8f7d 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7865: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 1 | wdata : 0xafd09e42ce5e8f7d 
+UVM_INFO ../tb/apb_driver.sv(20) @ 7865: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 0 | wdata = 0x0655a2942f2105100 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7925: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 7925: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 1 | wdata = 0x0874922a87d5acd68 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7985: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 1 | wdata : 0x874922a87d5acd68 
+UVM_INFO ../tb/apb_driver.sv(20) @ 7985: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 0 | wdata = 0x04a65874119d38be2 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8045: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 8045: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 1 | wdata = 0x0b55fef165fbcdb5f 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8105: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 1 | wdata : 0xb55fef165fbcdb5f 
+UVM_INFO ../tb/apb_driver.sv(20) @ 8105: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 0 | wdata = 0x08b3a1c1a9e274846 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8165: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 8165: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 1 | wdata = 0x0a238fb81d43fd46d 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8225: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 1 | wdata : 0xa238fb81d43fd46d 
+UVM_INFO ../tb/apb_driver.sv(20) @ 8225: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 0 | wdata = 0x0dd7acf4900b692a6 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8285: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 8285: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 1 | wdata = 0x0fde213eb09c4fa61 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8345: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 1 | wdata : 0xfde213eb09c4fa61 
+UVM_INFO ../tb/apb_driver.sv(20) @ 8345: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 0 | wdata = 0x08fd1f9677f76beb5 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8405: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 8405: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 1 | wdata = 0x0e1d7eddf6456bf37 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8465: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 1 | wdata : 0xe1d7eddf6456bf37 
+UVM_INFO ../tb/apb_driver.sv(20) @ 8465: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 0 | wdata = 0x07ba01461d4f4f5f3 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8525: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 8525: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 1 | wdata = 0x0ecd171201c817849 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8585: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 1 | wdata : 0xecd171201c817849 
+UVM_INFO ../tb/apb_driver.sv(20) @ 8585: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 0 | wdata = 0x0ef67f88a86156b21 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8645: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 8645: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xfff8 | write = 1 | wdata = 0x0c631c28624aba4ad 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8705: uvm_test_top.env.agent.monitor [Monitor] addr : 0xfff8 | write : 1 | wdata : 0xc631c28624aba4ad 
+UVM_INFO ../tb/apb_driver.sv(20) @ 8705: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xfff8 | write = 0 | wdata = 0x04e9ef42c36fb64ca 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8765: uvm_test_top.env.agent.monitor [Monitor] addr : 0xfff8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 8765: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 1 | wdata = 0x07f61c3bcf2dd5576 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8825: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 1 | wdata : 0x7f61c3bcf2dd5576 
+UVM_INFO ../tb/apb_driver.sv(20) @ 8825: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 0 | wdata = 0x02c37f8e7399cdb88 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8885: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 8885: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x0 | write = 1 | wdata = 0x0a05c1e15fac4eca 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8945: uvm_test_top.env.agent.monitor [Monitor] addr : 0x0 | write : 1 | wdata : 0xa05c1e15fac4eca 
+UVM_INFO ../tb/apb_driver.sv(20) @ 8945: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x0 | write = 0 | wdata = 0x0bed22afcb45c604a 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9005: uvm_test_top.env.agent.monitor [Monitor] addr : 0x0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 9005: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 1 | wdata = 0x0ab7cba2744741d49 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9065: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 1 | wdata : 0xab7cba2744741d49 
+UVM_INFO ../tb/apb_driver.sv(20) @ 9065: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 0 | wdata = 0x08d65c34944084cdc 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9125: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 9125: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 1 | wdata = 0x0801c2b8989de265 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9185: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 1 | wdata : 0x801c2b8989de265 
+UVM_INFO ../tb/apb_driver.sv(20) @ 9185: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 0 | wdata = 0x0ff7bedbecaefbf0 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9245: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 9245: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 1 | wdata = 0x0427d4948f75d19b3 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9305: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 1 | wdata : 0x427d4948f75d19b3 
+UVM_INFO ../tb/apb_driver.sv(20) @ 9305: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 0 | wdata = 0x07211f32b829ac85a 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9365: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 9365: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 1 | wdata = 0x0aa05cd0198e761bb 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9425: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 1 | wdata : 0xaa05cd0198e761bb 
+UVM_INFO ../tb/apb_driver.sv(20) @ 9425: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 0 | wdata = 0x07acaa7a4c11839d3 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9485: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 9485: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x0 | write = 1 | wdata = 0x08730149f0e5eb056 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9545: uvm_test_top.env.agent.monitor [Monitor] addr : 0x0 | write : 1 | wdata : 0x8730149f0e5eb056 
+UVM_INFO ../tb/apb_driver.sv(20) @ 9545: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x0 | write = 0 | wdata = 0x084dbdfcb42938273 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9605: uvm_test_top.env.agent.monitor [Monitor] addr : 0x0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 9605: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 1 | wdata = 0x095daee5ac908d221 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9665: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 1 | wdata : 0x95daee5ac908d221 
+UVM_INFO ../tb/apb_driver.sv(20) @ 9665: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 0 | wdata = 0x02b6fa2d36fdb3c74 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9725: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 9725: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 1 | wdata = 0x0e13d0592be6b17d5 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9785: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 1 | wdata : 0xe13d0592be6b17d5 
+UVM_INFO ../tb/apb_driver.sv(20) @ 9785: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 0 | wdata = 0x0b6b884c3d4eea5da 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9845: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 9845: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 1 | wdata = 0x0d4b4663d5bfbea98 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9905: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 1 | wdata : 0xd4b4663d5bfbea98 
+UVM_INFO ../tb/apb_driver.sv(20) @ 9905: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 0 | wdata = 0x04d51339bf82936b6 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9965: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 9965: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x0 | write = 1 | wdata = 0x052dfaf123c4e9b42 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10025: uvm_test_top.env.agent.monitor [Monitor] addr : 0x0 | write : 1 | wdata : 0x52dfaf123c4e9b42 
+UVM_INFO ../tb/apb_driver.sv(20) @ 10025: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x0 | write = 0 | wdata = 0x0209c0efa78a9bb39 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10085: uvm_test_top.env.agent.monitor [Monitor] addr : 0x0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 10085: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 1 | wdata = 0x0a068f1c62dd7e752 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10145: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 1 | wdata : 0xa068f1c62dd7e752 
+UVM_INFO ../tb/apb_driver.sv(20) @ 10145: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 0 | wdata = 0x05b9a7e5e95e2ca52 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10205: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 10205: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xfff8 | write = 1 | wdata = 0x0eed2ad47115a1df4 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10265: uvm_test_top.env.agent.monitor [Monitor] addr : 0xfff8 | write : 1 | wdata : 0xeed2ad47115a1df4 
+UVM_INFO ../tb/apb_driver.sv(20) @ 10265: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xfff8 | write = 0 | wdata = 0x042a1ed95803c01fc 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10325: uvm_test_top.env.agent.monitor [Monitor] addr : 0xfff8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 10325: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x0 | write = 1 | wdata = 0x04d1808451768820f 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10385: uvm_test_top.env.agent.monitor [Monitor] addr : 0x0 | write : 1 | wdata : 0x4d1808451768820f 
+UVM_INFO ../tb/apb_driver.sv(20) @ 10385: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x0 | write = 0 | wdata = 0x0d917217e753c7cf 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10445: uvm_test_top.env.agent.monitor [Monitor] addr : 0x0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 10445: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 1 | wdata = 0x012b2da2e81f3a3a1 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10505: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 1 | wdata : 0x12b2da2e81f3a3a1 
+UVM_INFO ../tb/apb_driver.sv(20) @ 10505: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 0 | wdata = 0x044ff5c75f11c49b4 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10565: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 10565: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 1 | wdata = 0x0f5a73251a380fccc 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10625: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 1 | wdata : 0xf5a73251a380fccc 
+UVM_INFO ../tb/apb_driver.sv(20) @ 10625: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 0 | wdata = 0x0d7191c17119f11d3 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10685: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 10685: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 1 | wdata = 0x0ccd89adce660f253 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10745: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 1 | wdata : 0xccd89adce660f253 
+UVM_INFO ../tb/apb_driver.sv(20) @ 10745: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 0 | wdata = 0x0f3a6d76ebab610cc 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10805: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 10805: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 1 | wdata = 0x0197e2c9b3447f550 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10865: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 1 | wdata : 0x197e2c9b3447f550 
+UVM_INFO ../tb/apb_driver.sv(20) @ 10865: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 0 | wdata = 0x06a6dffdda726b54e 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10925: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 10925: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x0 | write = 1 | wdata = 0x084a37535a70e9a4e 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10985: uvm_test_top.env.agent.monitor [Monitor] addr : 0x0 | write : 1 | wdata : 0x84a37535a70e9a4e 
+UVM_INFO ../tb/apb_driver.sv(20) @ 10985: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x0 | write = 0 | wdata = 0x0a62ffad231b0725a 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 11045: uvm_test_top.env.agent.monitor [Monitor] addr : 0x0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 11045: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x0 | write = 1 | wdata = 0x046173478a29f108d 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 11105: uvm_test_top.env.agent.monitor [Monitor] addr : 0x0 | write : 1 | wdata : 0x46173478a29f108d 
+UVM_INFO ../tb/apb_driver.sv(20) @ 11105: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x0 | write = 0 | wdata = 0x07ed79a3baaf4ae3c 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 11165: uvm_test_top.env.agent.monitor [Monitor] addr : 0x0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 11165: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x0 | write = 1 | wdata = 0x06f00f4df93c0d32c 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 11225: uvm_test_top.env.agent.monitor [Monitor] addr : 0x0 | write : 1 | wdata : 0x6f00f4df93c0d32c 
+UVM_INFO ../tb/apb_driver.sv(20) @ 11225: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x0 | write = 0 | wdata = 0x0bf54a6c97f521bc1 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 11285: uvm_test_top.env.agent.monitor [Monitor] addr : 0x0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 11285: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 1 | wdata = 0x092653887b1f3b59b 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 11345: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 1 | wdata : 0x92653887b1f3b59b 
+UVM_INFO ../tb/apb_driver.sv(20) @ 11345: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 0 | wdata = 0x094cc6fca282cc67e 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 11405: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 11405: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 1 | wdata = 0x0d681d6d85ddd7108 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 11465: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 1 | wdata : 0xd681d6d85ddd7108 
+UVM_INFO ../tb/apb_driver.sv(20) @ 11465: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 0 | wdata = 0x098e9631216562935 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 11525: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 11525: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 1 | wdata = 0x08b89d8b6b5adfdea 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 11585: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 1 | wdata : 0x8b89d8b6b5adfdea 
+UVM_INFO ../tb/apb_driver.sv(20) @ 11585: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 0 | wdata = 0x0dcfb8b22c291cc5a 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 11645: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 11645: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xfff8 | write = 1 | wdata = 0x01c6e7648021269ef 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 11705: uvm_test_top.env.agent.monitor [Monitor] addr : 0xfff8 | write : 1 | wdata : 0x1c6e7648021269ef 
+UVM_INFO ../tb/apb_driver.sv(20) @ 11705: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xfff8 | write = 0 | wdata = 0x0843bfc1ace1b9a96 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 11765: uvm_test_top.env.agent.monitor [Monitor] addr : 0xfff8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 11765: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xfff8 | write = 1 | wdata = 0x08cc8862cddb00a04 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 11825: uvm_test_top.env.agent.monitor [Monitor] addr : 0xfff8 | write : 1 | wdata : 0x8cc8862cddb00a04 
+UVM_INFO ../tb/apb_driver.sv(20) @ 11825: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xfff8 | write = 0 | wdata = 0x0f1c9f3f29e366548 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 11885: uvm_test_top.env.agent.monitor [Monitor] addr : 0xfff8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 11885: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xfff8 | write = 1 | wdata = 0x015ba74f059310bcc 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 11945: uvm_test_top.env.agent.monitor [Monitor] addr : 0xfff8 | write : 1 | wdata : 0x15ba74f059310bcc 
+UVM_INFO ../tb/apb_driver.sv(20) @ 11945: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xfff8 | write = 0 | wdata = 0x067cd79ecda798498 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 12005: uvm_test_top.env.agent.monitor [Monitor] addr : 0xfff8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 12005: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xeab0 | write = 0 | wdata = 0x0bdf50e693c56f363 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 12065: uvm_test_top.env.agent.monitor [Monitor] addr : 0xeab0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 12065: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x0 | write = 0 | wdata = 0x0d35bdd621c5571e1 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 12125: uvm_test_top.env.agent.monitor [Monitor] addr : 0x0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 12125: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x78f0 | write = 0 | wdata = 0x083a97e8447617372 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 12185: uvm_test_top.env.agent.monitor [Monitor] addr : 0x78f0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 12185: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x3158 | write = 0 | wdata = 0x084baf2be90821232 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 12245: uvm_test_top.env.agent.monitor [Monitor] addr : 0x3158 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 12245: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 0 | wdata = 0x07de491ce8b9605e7 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 12305: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 12305: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 0 | wdata = 0x0167e06150cc6b8b8 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 12365: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 12365: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 0 | wdata = 0x04c67af8fee67e41 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 12425: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 12425: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x5638 | write = 0 | wdata = 0x077259523f96c9b64 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 12485: uvm_test_top.env.agent.monitor [Monitor] addr : 0x5638 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 12485: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xd7a8 | write = 0 | wdata = 0x073f58750d630034e 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 12545: uvm_test_top.env.agent.monitor [Monitor] addr : 0xd7a8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 12545: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 0 | wdata = 0x041a98e540a1a355f 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 12605: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 12605: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xd5a0 | write = 0 | wdata = 0x05b1c1f3a5be106e6 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 12665: uvm_test_top.env.agent.monitor [Monitor] addr : 0xd5a0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 12665: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x0 | write = 0 | wdata = 0x01d6bccb624d5424d 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 12725: uvm_test_top.env.agent.monitor [Monitor] addr : 0x0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 12725: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xfff8 | write = 0 | wdata = 0x0fc199db3b31c9509 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 12785: uvm_test_top.env.agent.monitor [Monitor] addr : 0xfff8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 12785: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x2dd0 | write = 0 | wdata = 0x068d41128117ab6c4 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 12845: uvm_test_top.env.agent.monitor [Monitor] addr : 0x2dd0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 12845: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xdd40 | write = 0 | wdata = 0x0934277c80638266b 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 12905: uvm_test_top.env.agent.monitor [Monitor] addr : 0xdd40 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 12905: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x0 | write = 0 | wdata = 0x0efa00abbc3a2d142 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 12965: uvm_test_top.env.agent.monitor [Monitor] addr : 0x0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 12965: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xc6e8 | write = 0 | wdata = 0x041f79cb9fe176282 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 13025: uvm_test_top.env.agent.monitor [Monitor] addr : 0xc6e8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 13025: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 0 | wdata = 0x0f7b41e7fb0d19b29 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 13085: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 13085: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 0 | wdata = 0x04cfab06d4b0c37a2 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 13145: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 13145: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 0 | wdata = 0x0f3c10974ba18da5a 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 13205: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 13205: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xdd40 | write = 0 | wdata = 0x0d13aa67368cb7813 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 13265: uvm_test_top.env.agent.monitor [Monitor] addr : 0xdd40 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 13265: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 0 | wdata = 0x0baaec53ba53a4482 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 13325: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 13325: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xd228 | write = 0 | wdata = 0x0b9d1c1556ee29901 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 13385: uvm_test_top.env.agent.monitor [Monitor] addr : 0xd228 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 13385: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x9e10 | write = 0 | wdata = 0x0bf1d06cefad86fd0 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 13445: uvm_test_top.env.agent.monitor [Monitor] addr : 0x9e10 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 13445: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x1000 | write = 0 | wdata = 0x091bc0a00584a306e 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 13505: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1000 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 13505: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 0 | wdata = 0x08a8930c470e2cfab 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 13565: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 13565: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x12b8 | write = 0 | wdata = 0x05a6d448d9baec725 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 13625: uvm_test_top.env.agent.monitor [Monitor] addr : 0x12b8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 13625: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x89a8 | write = 0 | wdata = 0x0341c4fdd7f29242e 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 13685: uvm_test_top.env.agent.monitor [Monitor] addr : 0x89a8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 13685: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0x8 | write = 0 | wdata = 0x0fd64ab2c0d7b7dc7 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 13745: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_driver.sv(20) @ 13745: uvm_test_top.env.agent.driver [apb_driver] Driving transaction : addr = 0xc558 | write = 0 | wdata = 0x074a2dd5b46ecfb1e 
+UVM_INFO ../tb/apb_monitor.sv(29) @ 13805: uvm_test_top.env.agent.monitor [Monitor] addr : 0xc558 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_wr_rd_test.sv(54) @ 13805: uvm_test_top.env.agent.sequencer@@seq [apb_wr_rd_seq] Wr Rd Sequence Finished
+UVM_INFO ../tb/apb_test.sv(45) @ 13805: uvm_test_top [apb_wr_rd_test] Test run phase: seq done
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_objection.svh(1270) @ 13805: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO ../tb/apb_coverage.sv(157) @ 13805: uvm_test_top.env.cov [COV_SUMMARY] ------------FUNCTIONAL COVERAGE-----------
+UVM_INFO ../tb/apb_coverage.sv(158) @ 13805: uvm_test_top.env.cov [COV_SUMMARY] cg     (transfer coverage)  : 51.25 %
+UVM_INFO ../tb/apb_coverage.sv(159) @ 13805: uvm_test_top.env.cov [COV_SUMMARY] cg_b2b (back-to-back)       : 55.00 %
+UVM_INFO ../tb/apb_scoreboard.sv(85) @ 13805: uvm_test_top.env.scb [SCB_SUMMARY] ------------SCOREBOARD SUMMARY-----------
+UVM_INFO ../tb/apb_scoreboard.sv(86) @ 13805: uvm_test_top.env.scb [SCB_SUMMARY] Total Transfer :230
+UVM_INFO ../tb/apb_scoreboard.sv(87) @ 13805: uvm_test_top.env.scb [SCB_SUMMARY] Write/Read :100/130
+UVM_INFO ../tb/apb_scoreboard.sv(89) @ 13805: uvm_test_top.env.scb [SCB_SUMMARY] PSLVERR Check pass/fail:230/0
+UVM_INFO ../tb/apb_scoreboard.sv(90) @ 13805: uvm_test_top.env.scb [SCB_SUMMARY] Read data Check pass/fail :230/0
+UVM_INFO ../tb/apb_scoreboard.sv(91) @ 13805: uvm_test_top.env.scb [SCB_SUMMARY] Unchecked read bytes (never written) :130
+UVM_INFO ../tb/apb_base_test.sv(49) @ 13805: uvm_test_top [apb_wr_rd_test] ---------------------------------------
+UVM_INFO ../tb/apb_base_test.sv(50) @ 13805: uvm_test_top [apb_wr_rd_test] ----           TEST PASS           ----
+UVM_INFO ../tb/apb_base_test.sv(51) @ 13805: uvm_test_top [apb_wr_rd_test] ---------------------------------------
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 13805: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_report_server.svh(894) @ 13805: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  491
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[COV_SUMMARY]     3
+[Monitor]   230
+[RNTST]     1
+[SCB_SUMMARY]     6
+[TB_TOP]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[apb_agent]     1
+[apb_driver]   232
+[apb_env]     2
+[apb_mon]     2
+[apb_sequencer]     1
+[apb_wr_rd_seq]     2
+[apb_wr_rd_test]     6
+
+$finish called from file "/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time                13805
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, tgl was monitored
+---------------------------------------------------------------------------
+
+ Coverage status: End of All Coverages ...
+
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 13805
+CPU Time:      0.590 seconds;       Data structure size:   0.4Mb
+Sun Oct  4 21:11:17 2026

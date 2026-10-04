@@ -1,0 +1,8 @@
+// include directories
++incdir+../rtl
++incdir+../tb
+
+../rtl/design.sv
+
+../tb/apb_interface.sv 
+../tb/apb_top.sv

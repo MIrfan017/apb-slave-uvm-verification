@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: tb_top</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_tb_top'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_tb_top')">tb_top</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s8 cl rt"> 87.50</td>
+<td class="s10 cl rt"><a href="mod6.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"><a href="mod6.html#Toggle" > 75.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="file:///mnt/mydata/APB_UVM/sim/../tb/apb_top.sv" >/mnt/mydata/APB_UVM/sim/../tb/apb_top.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod6.html#inst_tag_5"  onclick="showContent('inst_tag_5')">tb_top</a></td>
+<td class="s8 cl rt"> 87.50</td>
+<td class="s10 cl rt"><a href="mod6.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"><a href="mod6.html#Toggle" > 75.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_tb_top'>
+<hr>
+<a name="inst_tag_5"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_5" >tb_top</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s8 cl rt"> 87.50</td>
+<td class="s10 cl rt"><a href="mod6.html#Line" >100.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"><a href="mod6.html#Toggle" > 75.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 99.47</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s9 cl rt"> 98.60</td>
+<td class="s9 cl rt"> 99.81</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<span class=inst>none</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod9.html#inst_tag_8" id="tag_urg_inst_8">apb_intf</a></td>
+<td class="s9 cl rt"> 99.43</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 99.43</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod10.html#inst_tag_9" id="tag_urg_inst_9">dut</a></td>
+<td class="s9 cl rt"> 99.49</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s9 cl rt"> 98.60</td>
+<td class="s9 cl rt"> 99.85</td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_tb_top'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod6.html" >tb_top</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>14</td><td>14</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">INITIAL</td><td>29</td><td>1</td><td>1</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>30</td><td>2</td><td>2</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">INITIAL</td><td>32</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">INITIAL</td><td>43</td><td>5</td><td>5</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">INITIAL</td><td>49</td><td>2</td><td>2</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+<span style="margin-left:8px;"></span>28                          logic PRESETn;
+<span style="margin-left:8px;"></span>29         1/1              initial PCLK=0;
+<span style="margin-left:8px;"></span>30         2/2              always #5 PCLK=~PCLK;
+<span style="margin-left:8px;"></span>31                          initial begin
+<span style="margin-left:8px;"></span>32         1/1                  PRESETn=0; 
+<span style="margin-left:8px;"></span>33         2/2                  #20;
+<span style="margin-left:8px;"></span>34         1/1                  PRESETn=1;
+<span style="margin-left:8px;"></span>35                          end
+<span style="margin-left:8px;"></span>36                          apb_if apb_intf(.PCLK(PCLK));
+<span style="margin-left:8px;"></span>37                          apb_wrapper #(.ADDR_W(32),.DATA_W(64),.MEM_SIZE_K(64),.BASE_ADDR(0)) dut (
+<span style="margin-left:8px;"></span>38                              .PCLK(PCLK),.PRESETn(PRESETn),.PSELx(apb_intf.PSELx),.PENABLE(apb_intf.PENABLE),.PWRITE(apb_intf.PWRITE),
+<span style="margin-left:8px;"></span>39                              .PWDATA(apb_intf.PWDATA),.PSTRB(apb_intf.PSTRB),.PADDR(apb_intf.PADDR),.PRDATA(apb_intf.PRDATA),
+<span style="margin-left:8px;"></span>40                              .PREADY(apb_intf.PREADY),.PSLVERR(apb_intf.PSLVERR)
+<span style="margin-left:8px;"></span>41                          );
+<span style="margin-left:8px;"></span>42                          initial begin
+<span style="margin-left:8px;"></span>43         1/1                   uvm_config_db # (virtual apb_if)::set(null,&quot;*&quot;,&quot;vif&quot;,apb_intf);
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAWklEQVQoU2P8DwQMeAATPkmQHOPdu3f/d3R0MEhJSaGoffHiBUNeXh4DA8iK5ORkkDUoODAwECT1H6wABIqLi+EKEhMTYcIIBSCRtLS0/0FBQXBJEIORYl8AAFaWVAK2EPn+AAAAAElFTkSuQmCC" onclick="var macroId='macro_-982441348_44';if (document.getElementById(macroId).style.display=='none') {document.getElementById(macroId).style.display='block';this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAWklEQVQoU2P8DwQMeAATPkmQHOPdu3f/d3R0MEhJSaGoffHiBUNeXh4DA8iK5ORkkDUoODAwECT1H6wABIqLi+EKEhMTYcIIBSCRtLS0/0FBQXBJEIORYl8AAFaWVAK2EPn+AAAAAElFTkSuQmCC';} else {document.getElementById(macroId).style.display='none';this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAV0lEQVQoU4VP2w3AIAi8dg3ngwVwDSZAR3MVak2KiamJ98Pd5Xjh+dBaC7rUayi8YGa4O0opQ07cwVJKqLUi57wPhKuqIKL/hKVttyI8EYGZzcjxSJze7GaHXHvKclWLAAAAAElFTkSuQmCC';}">44         <span onclick="var macroId='macro_-982441348_44';if (document.getElementById(macroId).style.display=='none') {document.getElementById(macroId).style.display='block';} else {document.getElementById(macroId).style.display='none';}">2/2                  `uvm_info(&quot;TB_TOP&quot;,&quot;Starting UVM Test ...&quot;, UVM_LOW);<br/></span><span id="macro_-982441348_44" style="background-color:#F0F0F0; display:block;"><span style="margin-left:8px;"></span><a href="/usr/synopsys/vcs-L-2016.06/etc/uvm-1.2/macros/uvm_message_defines.svh" target="_blank">uvm_info("TB_TOP","Starting UVM Test ...", UVM_LOW):</a>
+<span style="margin-left:8px;"></span>44.1                    begin 
+<span style="margin-left:8px;"></span>44.2       1/1               if (uvm_report_enabled(UVM_LOW,UVM_INFO,&quot;TB_TOP&quot;)) 
+<span style="margin-left:8px;"></span>44.3       2/2                 uvm_report_info (&quot;TB_TOP&quot;, &quot;Starting UVM Test ...&quot;, UVM_LOW, &quot;../tb/apb_top.sv&quot;, 44, &quot;&quot;, 1); 
+<span style="margin-left:8px;"></span>44.4                       end</span>                   <font color = "red">==>  MISSING_ELSE</font>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAWklEQVQoU2P8DwQMeAATPkmQHOPdu3f/d3R0MEhJSaGoffHiBUNeXh4DA8iK5ORkkDUoODAwECT1H6wABIqLi+EKEhMTYcIIBSCRtLS0/0FBQXBJEIORYl8AAFaWVAK2EPn+AAAAAElFTkSuQmCC" onclick="var macroId='macro_-982441348_44';if (document.getElementById(macroId).style.display=='none') {document.getElementById(macroId).style.display='block';this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAWklEQVQoU2P8DwQMeAATPkmQHOPdu3f/d3R0MEhJSaGoffHiBUNeXh4DA8iK5ORkkDUoODAwECT1H6wABIqLi+EKEhMTYcIIBSCRtLS0/0FBQXBJEIORYl8AAFaWVAK2EPn+AAAAAElFTkSuQmCC';} else {document.getElementById(macroId).style.display='none';this.src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAAV0lEQVQoU4VP2w3AIAi8dg3ngwVwDSZAR3MVak2KiamJ98Pd5Xjh+dBaC7rUayi8YGa4O0opQ07cwVJKqLUi57wPhKuqIKL/hKVttyI8EYGZzcjxSJze7GaHXHvKclWLAAAAAElFTkSuQmCC';}">44         <span onclick="var macroId='macro_-982441348_44';if (document.getElementById(macroId).style.display=='none') {document.getElementById(macroId).style.display='block';} else {document.getElementById(macroId).style.display='none';}">1/1                  `uvm_info(&quot;TB_TOP&quot;,&quot;Starting UVM Test ...&quot;, UVM_LOW);<br/></span><span id="macro_-982441348_44" style="background-color:#F0F0F0; display:block;"><span style="margin-left:8px;"></span><a href="/usr/synopsys/vcs-L-2016.06/etc/uvm-1.2/macros/uvm_message_defines.svh" target="_blank">uvm_info("TB_TOP","Starting UVM Test ...", UVM_LOW):</a>
+<span style="margin-left:8px;"></span>44.1                    begin 
+<span style="margin-left:8px;"></span>44.2       1/1               if (uvm_report_enabled(UVM_LOW,UVM_INFO,&quot;TB_TOP&quot;)) 
+<span style="margin-left:8px;"></span>44.3       2/2                 uvm_report_info (&quot;TB_TOP&quot;, &quot;Starting UVM Test ...&quot;, UVM_LOW, &quot;../tb/apb_top.sv&quot;, 44, &quot;&quot;, 1); 
+<span style="margin-left:8px;"></span>44.4                       end</span><span style="margin-left:8px;"></span>45         1/1                  run_test(&quot;apb_base_test&quot;);
+<span style="margin-left:8px;"></span>46                          end
+<span style="margin-left:8px;"></span>47                          initial begin
+<span style="margin-left:8px;"></span>48                      
+<span style="margin-left:8px;"></span>49         1/1                  $vcdplusfile(&quot;waveform.vpd&quot;);
+<span style="margin-left:8px;"></span>50         1/1                  $vcdpluson;
+</pre>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod6.html" >tb_top</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Totals</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s7">
+<td>Total Bits</td>
+<td class="rt">4</td>
+<td class="rt">3</td>
+<td class="rt">75.00 </td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s5">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s5">
+<td>Signals</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s7">
+<td>Signal Bits</td>
+<td class="rt">4</td>
+<td class="rt">3</td>
+<td class="rt">75.00 </td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s5">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>PCLK</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>PRESETn</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_5">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+  </ul>
+  <ul name="tag_tb_top">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

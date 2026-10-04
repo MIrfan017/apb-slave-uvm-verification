@@ -1,0 +1,578 @@
+
+Note-[RT_BS] Larger stack needed
+  Note: Bumping stack limit from 8192 to 8250 Kbytes.
+
+Chronologic VCS simulator copyright 1991-2016
+Contains Synopsys proprietary information.
+Compiler version L-2016.06_Full64; Runtime version L-2016.06_Full64;  Oct  4 21:12 2026
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh(402) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2.Synopsys
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+  See http://www.eda.org/svdb/view.php?id=3313 for more details.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+  See http://www.eda.org/svdb/view.php?id=3770 for more details.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+
+ VCS Coverage Metrics Release L-2016.06_Full64 Copyright (c) 1991-2016 by Synopsys Inc.
+UVM_INFO ../tb/apb_top.sv(44) @ 0: reporter [TB_TOP] Starting UVM Test ...
+UVM_INFO @ 0: reporter [RNTST] Running test apb_b2b_test...
+VCD+ Writer L-2016.06_Full64 Copyright (c) 1991-2016 by Synopsys Inc.
+UVM_INFO @ 0: reporter [TIMOUTSET] '+UVM_TIMEOUT=9200000' provided on the command line is being applied.
+UVM_INFO ../tb/apb_test.sv(106) @ 0: uvm_test_top [apb_b2b_test] Test build phase
+UVM_INFO ../tb/apb_env.sv(13) @ 0: uvm_test_top.env [apb_env] Env build phase
+
+Note-[FCICIO] Instance coverage is ON
+/mnt/mydata/APB_UVM/sim/../tb/apb_coverage.sv, 28
+apb_pkg, "apb_pkg::apb_coverage::cg"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'apb_pkg::apb_coverage::cg'
+  
+  Covergroup Instance: tb_top.me.obj.cg 
+  Design hierarchy: apb_pkg
+
+
+Note-[FCICIO] Instance coverage is ON
+/mnt/mydata/APB_UVM/sim/../tb/apb_coverage.sv, 86
+apb_pkg, "apb_pkg::apb_coverage::cg_b2b"
+  Instance coverage is set (option.per_instance = 1) for covergroup 
+  'apb_pkg::apb_coverage::cg_b2b'
+  
+  Covergroup Instance: tb_top.me.obj.cg_b2b 
+  Design hierarchy: apb_pkg
+
+UVM_INFO ../tb/apb_agent.sv(13) @ 0: uvm_test_top.env.agent [apb_agent] Agent build phase
+UVM_INFO ../tb/apb_sequencer.sv(6) @ 0: uvm_test_top.env.agent.sequencer [apb_sequencer] sequence build phase
+UVM_INFO ../tb/apb_driver.sv(11) @ 0: uvm_test_top.env.agent.driver [apb_b2b_driver] Driver build phase
+UVM_INFO ../tb/apb_monitor.sv(12) @ 0: uvm_test_top.env.agent.monitor [apb_mon] apb_mon build phase
+UVM_INFO ../tb/apb_env.sv(21) @ 0: uvm_test_top.env [apb_env] Env connect phase
+--------------------------------------------------------------
+Name                       Type                    Size  Value
+--------------------------------------------------------------
+uvm_test_top               apb_b2b_test            -     @343 
+  env                      apb_env                 -     @358 
+    agent                  apb_agent               -     @377 
+      driver               apb_b2b_driver          -     @417 
+        rsp_port           uvm_analysis_port       -     @436 
+        seq_item_port      uvm_seq_item_pull_port  -     @426 
+      monitor              apb_mon                 -     @585 
+        ap                 uvm_analysis_port       -     @597 
+      sequencer            apb_sequencer           -     @446 
+        rsp_export         uvm_analysis_export     -     @455 
+        seq_item_export    uvm_seq_item_pull_imp   -     @573 
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+    cov                    apb_coverage            -     @395 
+      analysis_imp         uvm_analysis_imp        -     @404 
+    scb                    apb_scoreboard          -     @386 
+      item_export          uvm_analysis_imp        -     @616 
+--------------------------------------------------------------
+UVM_INFO ../tb/apb_b2b_driver.sv(10) @ 0: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B Driver run phase started 
+UVM_INFO ../tb/apb_monitor.sv(18) @ 0: uvm_test_top.env.agent.monitor [apb_mon] apb_mon run phase started 
+UVM_INFO ../tb/apb_test.sv(112) @ 0: uvm_test_top [apb_b2b_test] Test run phase
+UVM_INFO ../tb/apb_b2b_seq.sv(17) @ 0: uvm_test_top.env.agent.sequencer@@seq [apb_b2b_seq] Back-to-Back Sequence Started :
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 15: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x29a8 | write = 1 | wdata = 0x315b2319565249b2 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 65: uvm_test_top.env.agent.monitor [Monitor] addr : 0x29a8 | write : 1 | wdata : 0x315b2319565249b2 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 65: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x29b0 | write = 1 | wdata = 0xc769898e8a5ef3f0 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 115: uvm_test_top.env.agent.monitor [Monitor] addr : 0x29b0 | write : 1 | wdata : 0xc769898e8a5ef3f0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 115: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x29b8 | write = 1 | wdata = 0x76a536dc8cfec5c2 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 165: uvm_test_top.env.agent.monitor [Monitor] addr : 0x29b8 | write : 1 | wdata : 0x76a536dc8cfec5c2 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 165: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x29c0 | write = 1 | wdata = 0xa90ae6884c08b960 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 215: uvm_test_top.env.agent.monitor [Monitor] addr : 0x29c0 | write : 1 | wdata : 0xa90ae6884c08b960 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 215: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x29c8 | write = 1 | wdata = 0xe48c4e631f6e1747 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 265: uvm_test_top.env.agent.monitor [Monitor] addr : 0x29c8 | write : 1 | wdata : 0xe48c4e631f6e1747 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 265: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x29d0 | write = 1 | wdata = 0x2e4dec9e78be5622 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 315: uvm_test_top.env.agent.monitor [Monitor] addr : 0x29d0 | write : 1 | wdata : 0x2e4dec9e78be5622 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 315: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x29d8 | write = 1 | wdata = 0x78ef284e1beb8473 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 365: uvm_test_top.env.agent.monitor [Monitor] addr : 0x29d8 | write : 1 | wdata : 0x78ef284e1beb8473 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 365: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x29e0 | write = 1 | wdata = 0xbc372bc0d5d40819 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 415: uvm_test_top.env.agent.monitor [Monitor] addr : 0x29e0 | write : 1 | wdata : 0xbc372bc0d5d40819 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 415: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x29e8 | write = 1 | wdata = 0x322dd26b8bd342da | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 465: uvm_test_top.env.agent.monitor [Monitor] addr : 0x29e8 | write : 1 | wdata : 0x322dd26b8bd342da 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 465: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x29f0 | write = 1 | wdata = 0xc81e8014c21d4959 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 515: uvm_test_top.env.agent.monitor [Monitor] addr : 0x29f0 | write : 1 | wdata : 0xc81e8014c21d4959 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 515: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x29f8 | write = 1 | wdata = 0x28aad22626695807 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 565: uvm_test_top.env.agent.monitor [Monitor] addr : 0x29f8 | write : 1 | wdata : 0x28aad22626695807 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 565: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x2a00 | write = 1 | wdata = 0xebc43fc52180915f | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 615: uvm_test_top.env.agent.monitor [Monitor] addr : 0x2a00 | write : 1 | wdata : 0xebc43fc52180915f 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 615: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x2a08 | write = 1 | wdata = 0xd4623d26f43316ab | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 665: uvm_test_top.env.agent.monitor [Monitor] addr : 0x2a08 | write : 1 | wdata : 0xd4623d26f43316ab 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 665: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x2a10 | write = 1 | wdata = 0x3d45a9d2a347626d | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 715: uvm_test_top.env.agent.monitor [Monitor] addr : 0x2a10 | write : 1 | wdata : 0x3d45a9d2a347626d 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 715: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x2a18 | write = 1 | wdata = 0xca7d560eaf318ed6 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 765: uvm_test_top.env.agent.monitor [Monitor] addr : 0x2a18 | write : 1 | wdata : 0xca7d560eaf318ed6 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 765: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x2a20 | write = 1 | wdata = 0xb608c5bc1de81b81 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 815: uvm_test_top.env.agent.monitor [Monitor] addr : 0x2a20 | write : 1 | wdata : 0xb608c5bc1de81b81 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 815: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x29a8 | write = 0 | wdata = 0x3665972f5ee776b9 | strb = 0x9d
+UVM_INFO ../tb/apb_monitor.sv(29) @ 865: uvm_test_top.env.agent.monitor [Monitor] addr : 0x29a8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 865: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x29b0 | write = 0 | wdata = 0xec77d39cd0b347cb | strb = 0xc2
+UVM_INFO ../tb/apb_monitor.sv(29) @ 915: uvm_test_top.env.agent.monitor [Monitor] addr : 0x29b0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 915: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x29b8 | write = 0 | wdata = 0xdd3af6c162e36503 | strb = 0x3c
+UVM_INFO ../tb/apb_monitor.sv(29) @ 965: uvm_test_top.env.agent.monitor [Monitor] addr : 0x29b8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 965: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x29c0 | write = 0 | wdata = 0xcab2d1ef77e4e24d | strb = 0x30
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1015: uvm_test_top.env.agent.monitor [Monitor] addr : 0x29c0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 1015: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x29c8 | write = 0 | wdata = 0x99568b6c42d4c5d6 | strb = 0x96
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1065: uvm_test_top.env.agent.monitor [Monitor] addr : 0x29c8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 1065: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x29d0 | write = 0 | wdata = 0xc94e3db740a84b91 | strb = 0x27
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1115: uvm_test_top.env.agent.monitor [Monitor] addr : 0x29d0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 1115: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x29d8 | write = 0 | wdata = 0xc551dc00672a4c05 | strb = 0x93
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1165: uvm_test_top.env.agent.monitor [Monitor] addr : 0x29d8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 1165: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x29e0 | write = 0 | wdata = 0x1f23680158259bcc | strb = 0x54
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1215: uvm_test_top.env.agent.monitor [Monitor] addr : 0x29e0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 1215: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x29e8 | write = 0 | wdata = 0xf12cbddd44154932 | strb = 0xe0
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1265: uvm_test_top.env.agent.monitor [Monitor] addr : 0x29e8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 1265: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x29f0 | write = 0 | wdata = 0x4d4b31c84986f236 | strb = 0x80
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1315: uvm_test_top.env.agent.monitor [Monitor] addr : 0x29f0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 1315: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x29f8 | write = 0 | wdata = 0xb0963ae9a2ceac73 | strb = 0xac
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1365: uvm_test_top.env.agent.monitor [Monitor] addr : 0x29f8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 1365: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x2a00 | write = 0 | wdata = 0x591200af5d425a6 | strb = 0x1c
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1415: uvm_test_top.env.agent.monitor [Monitor] addr : 0x2a00 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 1415: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x2a08 | write = 0 | wdata = 0xa001ec9df0ab979c | strb = 0x39
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1465: uvm_test_top.env.agent.monitor [Monitor] addr : 0x2a08 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 1465: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x2a10 | write = 0 | wdata = 0x5d619b82929c082f | strb = 0x39
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1515: uvm_test_top.env.agent.monitor [Monitor] addr : 0x2a10 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 1515: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x2a18 | write = 0 | wdata = 0x26d9ae29cad1ed14 | strb = 0x2
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1565: uvm_test_top.env.agent.monitor [Monitor] addr : 0x2a18 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 1565: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x2a20 | write = 0 | wdata = 0xe154eba11a6240f9 | strb = 0x9d
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1615: uvm_test_top.env.agent.monitor [Monitor] addr : 0x2a20 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 1615: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x8eb0 | write = 1 | wdata = 0xa497468cfd2564e3 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1665: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8eb0 | write : 1 | wdata : 0xa497468cfd2564e3 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 1665: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x8eb0 | write = 0 | wdata = 0x893e305f067f4ca1 | strb = 0x9a
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1715: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8eb0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 1715: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x8eb0 | write = 1 | wdata = 0xd7a8a20c964bd2d3 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1765: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8eb0 | write : 1 | wdata : 0xd7a8a20c964bd2d3 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 1765: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x8eb0 | write = 1 | wdata = 0x16765d713d8d15bf | strb = 0x17
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1815: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8eb0 | write : 1 | wdata : 0x16765d713d8d15bf 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 1815: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x8eb0 | write = 0 | wdata = 0x1c2fbd29b6a2aa00 | strb = 0x9c
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1865: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8eb0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 1865: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xec48 | write = 1 | wdata = 0x95f79b6c14f83a86 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1915: uvm_test_top.env.agent.monitor [Monitor] addr : 0xec48 | write : 1 | wdata : 0x95f79b6c14f83a86 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 1915: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xec48 | write = 0 | wdata = 0xff26067f115d73e | strb = 0xb6
+UVM_INFO ../tb/apb_monitor.sv(29) @ 1965: uvm_test_top.env.agent.monitor [Monitor] addr : 0xec48 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 1965: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xec48 | write = 1 | wdata = 0x1dfa34084fa86425 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2015: uvm_test_top.env.agent.monitor [Monitor] addr : 0xec48 | write : 1 | wdata : 0x1dfa34084fa86425 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 2015: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xec48 | write = 1 | wdata = 0xb1c8bc8980a48877 | strb = 0xc0
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2065: uvm_test_top.env.agent.monitor [Monitor] addr : 0xec48 | write : 1 | wdata : 0xb1c8bc8980a48877 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 2065: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xec48 | write = 0 | wdata = 0x547243b1a0a27a17 | strb = 0xd6
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2115: uvm_test_top.env.agent.monitor [Monitor] addr : 0xec48 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 2115: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x60d0 | write = 1 | wdata = 0x6b3e6b1c85a7fafe | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2165: uvm_test_top.env.agent.monitor [Monitor] addr : 0x60d0 | write : 1 | wdata : 0x6b3e6b1c85a7fafe 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 2165: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x60d0 | write = 0 | wdata = 0xa09994f436d72d | strb = 0xe9
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2215: uvm_test_top.env.agent.monitor [Monitor] addr : 0x60d0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 2215: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x60d0 | write = 1 | wdata = 0x49b5b5d392a5a865 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2265: uvm_test_top.env.agent.monitor [Monitor] addr : 0x60d0 | write : 1 | wdata : 0x49b5b5d392a5a865 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 2265: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x60d0 | write = 1 | wdata = 0x1c8228afc8fd2065 | strb = 0xcc
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2315: uvm_test_top.env.agent.monitor [Monitor] addr : 0x60d0 | write : 1 | wdata : 0x1c8228afc8fd2065 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 2315: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x60d0 | write = 0 | wdata = 0xe700d1b997e924a0 | strb = 0xdb
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2365: uvm_test_top.env.agent.monitor [Monitor] addr : 0x60d0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 2365: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x8b28 | write = 1 | wdata = 0x205d06ceffbfb474 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2415: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8b28 | write : 1 | wdata : 0x205d06ceffbfb474 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 2415: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x8b28 | write = 0 | wdata = 0x740b616359856ec9 | strb = 0x6
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2465: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8b28 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 2465: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x8b28 | write = 1 | wdata = 0xd9d99b17fd523965 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2515: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8b28 | write : 1 | wdata : 0xd9d99b17fd523965 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 2515: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x8b28 | write = 1 | wdata = 0x9797593f843b7f7 | strb = 0x71
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2565: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8b28 | write : 1 | wdata : 0x9797593f843b7f7 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 2565: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x8b28 | write = 0 | wdata = 0xc1d111cb047050e3 | strb = 0x1e
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2615: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8b28 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 2615: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x48f8 | write = 1 | wdata = 0x9889575cbcfb09b8 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2665: uvm_test_top.env.agent.monitor [Monitor] addr : 0x48f8 | write : 1 | wdata : 0x9889575cbcfb09b8 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 2665: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x48f8 | write = 0 | wdata = 0x52a2474ed4915017 | strb = 0x10
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2715: uvm_test_top.env.agent.monitor [Monitor] addr : 0x48f8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 2715: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x48f8 | write = 1 | wdata = 0x9e0d9955dbb88f73 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2765: uvm_test_top.env.agent.monitor [Monitor] addr : 0x48f8 | write : 1 | wdata : 0x9e0d9955dbb88f73 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 2765: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x48f8 | write = 1 | wdata = 0xcea1b1fb83402aaf | strb = 0x8d
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2815: uvm_test_top.env.agent.monitor [Monitor] addr : 0x48f8 | write : 1 | wdata : 0xcea1b1fb83402aaf 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 2815: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x48f8 | write = 0 | wdata = 0x869e46c8aea83f67 | strb = 0xd2
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2865: uvm_test_top.env.agent.monitor [Monitor] addr : 0x48f8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 2865: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xfae0 | write = 1 | wdata = 0x1b265f791a1d81b8 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2915: uvm_test_top.env.agent.monitor [Monitor] addr : 0xfae0 | write : 1 | wdata : 0x1b265f791a1d81b8 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 2915: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xfae0 | write = 0 | wdata = 0xd6ce4bac23eecf10 | strb = 0x15
+UVM_INFO ../tb/apb_monitor.sv(29) @ 2965: uvm_test_top.env.agent.monitor [Monitor] addr : 0xfae0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 2965: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xfae0 | write = 1 | wdata = 0x9d048c808e7717b5 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3015: uvm_test_top.env.agent.monitor [Monitor] addr : 0xfae0 | write : 1 | wdata : 0x9d048c808e7717b5 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 3015: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xfae0 | write = 1 | wdata = 0x74363ac9ba00471a | strb = 0x61
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3065: uvm_test_top.env.agent.monitor [Monitor] addr : 0xfae0 | write : 1 | wdata : 0x74363ac9ba00471a 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 3065: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xfae0 | write = 0 | wdata = 0x3c6a74f40d610461 | strb = 0xcb
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3115: uvm_test_top.env.agent.monitor [Monitor] addr : 0xfae0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 3115: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x6de8 | write = 1 | wdata = 0xc6e664dfc260d7b5 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3165: uvm_test_top.env.agent.monitor [Monitor] addr : 0x6de8 | write : 1 | wdata : 0xc6e664dfc260d7b5 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 3165: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x6de8 | write = 0 | wdata = 0x7266a4e355534902 | strb = 0xc7
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3215: uvm_test_top.env.agent.monitor [Monitor] addr : 0x6de8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 3215: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x6de8 | write = 1 | wdata = 0x2f934109fccb6673 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3265: uvm_test_top.env.agent.monitor [Monitor] addr : 0x6de8 | write : 1 | wdata : 0x2f934109fccb6673 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 3265: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x6de8 | write = 1 | wdata = 0xaed62c94ca7837fb | strb = 0xcc
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3315: uvm_test_top.env.agent.monitor [Monitor] addr : 0x6de8 | write : 1 | wdata : 0xaed62c94ca7837fb 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 3315: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x6de8 | write = 0 | wdata = 0x3a00c7212298f9b5 | strb = 0x61
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3365: uvm_test_top.env.agent.monitor [Monitor] addr : 0x6de8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 3365: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x5ee8 | write = 1 | wdata = 0xefa1ba78d2b8c515 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3415: uvm_test_top.env.agent.monitor [Monitor] addr : 0x5ee8 | write : 1 | wdata : 0xefa1ba78d2b8c515 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 3415: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x5ee8 | write = 0 | wdata = 0xb9938dd65e30f8c7 | strb = 0x83
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3465: uvm_test_top.env.agent.monitor [Monitor] addr : 0x5ee8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 3465: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x5ee8 | write = 1 | wdata = 0x8df37964f9eb322f | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3515: uvm_test_top.env.agent.monitor [Monitor] addr : 0x5ee8 | write : 1 | wdata : 0x8df37964f9eb322f 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 3515: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x5ee8 | write = 1 | wdata = 0x1b277f9ab49c34e2 | strb = 0xfb
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3565: uvm_test_top.env.agent.monitor [Monitor] addr : 0x5ee8 | write : 1 | wdata : 0x1b277f9ab49c34e2 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 3565: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x5ee8 | write = 0 | wdata = 0x3e049ca9e920b202 | strb = 0x6a
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3615: uvm_test_top.env.agent.monitor [Monitor] addr : 0x5ee8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 3615: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x5848 | write = 1 | wdata = 0x41a7bcefa98f4575 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3665: uvm_test_top.env.agent.monitor [Monitor] addr : 0x5848 | write : 1 | wdata : 0x41a7bcefa98f4575 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 3665: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x5848 | write = 0 | wdata = 0xc4db12e3ea881e0b | strb = 0x3b
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3715: uvm_test_top.env.agent.monitor [Monitor] addr : 0x5848 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 3715: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x5848 | write = 1 | wdata = 0x2dd19801d6c145b5 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3765: uvm_test_top.env.agent.monitor [Monitor] addr : 0x5848 | write : 1 | wdata : 0x2dd19801d6c145b5 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 3765: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x5848 | write = 1 | wdata = 0x8fde0806694bcb61 | strb = 0x42
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3815: uvm_test_top.env.agent.monitor [Monitor] addr : 0x5848 | write : 1 | wdata : 0x8fde0806694bcb61 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 3815: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x5848 | write = 0 | wdata = 0xd223afd579a6c6d0 | strb = 0x79
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3865: uvm_test_top.env.agent.monitor [Monitor] addr : 0x5848 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 3865: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xceb8 | write = 1 | wdata = 0x3e4be6c2ba44f7b7 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3915: uvm_test_top.env.agent.monitor [Monitor] addr : 0xceb8 | write : 1 | wdata : 0x3e4be6c2ba44f7b7 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 3915: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xceb8 | write = 0 | wdata = 0xb887375a8ccb8a67 | strb = 0x5c
+UVM_INFO ../tb/apb_monitor.sv(29) @ 3965: uvm_test_top.env.agent.monitor [Monitor] addr : 0xceb8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 3965: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xceb8 | write = 1 | wdata = 0xe37b5888cf8f79ff | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4015: uvm_test_top.env.agent.monitor [Monitor] addr : 0xceb8 | write : 1 | wdata : 0xe37b5888cf8f79ff 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 4015: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xceb8 | write = 1 | wdata = 0x4684b4aa7bac438b | strb = 0xcd
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4065: uvm_test_top.env.agent.monitor [Monitor] addr : 0xceb8 | write : 1 | wdata : 0x4684b4aa7bac438b 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 4065: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xceb8 | write = 0 | wdata = 0xcffae37c42594c74 | strb = 0x74
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4115: uvm_test_top.env.agent.monitor [Monitor] addr : 0xceb8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 4115: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x9820 | write = 1 | wdata = 0xd59dd17bd2c4d585 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4165: uvm_test_top.env.agent.monitor [Monitor] addr : 0x9820 | write : 1 | wdata : 0xd59dd17bd2c4d585 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 4165: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x9820 | write = 0 | wdata = 0x86bc8429a4ecbb68 | strb = 0x16
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4215: uvm_test_top.env.agent.monitor [Monitor] addr : 0x9820 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 4215: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x9820 | write = 1 | wdata = 0xb1e9eb9ac10db50 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4265: uvm_test_top.env.agent.monitor [Monitor] addr : 0x9820 | write : 1 | wdata : 0xb1e9eb9ac10db50 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 4265: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x9820 | write = 1 | wdata = 0x389d9a30823bb328 | strb = 0x2e
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4315: uvm_test_top.env.agent.monitor [Monitor] addr : 0x9820 | write : 1 | wdata : 0x389d9a30823bb328 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 4315: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x9820 | write = 0 | wdata = 0xa5466dee9bf453c4 | strb = 0x11
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4365: uvm_test_top.env.agent.monitor [Monitor] addr : 0x9820 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 4365: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xa7d0 | write = 1 | wdata = 0x2e20f1877a15a7cc | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4415: uvm_test_top.env.agent.monitor [Monitor] addr : 0xa7d0 | write : 1 | wdata : 0x2e20f1877a15a7cc 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 4415: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xa7d0 | write = 0 | wdata = 0x90215279fa6915d8 | strb = 0x74
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4465: uvm_test_top.env.agent.monitor [Monitor] addr : 0xa7d0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 4465: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xa7d0 | write = 1 | wdata = 0x2f124b33a5d8f218 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4515: uvm_test_top.env.agent.monitor [Monitor] addr : 0xa7d0 | write : 1 | wdata : 0x2f124b33a5d8f218 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 4515: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xa7d0 | write = 1 | wdata = 0x5d83e203561775fc | strb = 0xcf
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4565: uvm_test_top.env.agent.monitor [Monitor] addr : 0xa7d0 | write : 1 | wdata : 0x5d83e203561775fc 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 4565: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xa7d0 | write = 0 | wdata = 0x4178261c45980039 | strb = 0x7c
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4615: uvm_test_top.env.agent.monitor [Monitor] addr : 0xa7d0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 4615: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x6530 | write = 1 | wdata = 0x12bd43ecf10ce2dd | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4665: uvm_test_top.env.agent.monitor [Monitor] addr : 0x6530 | write : 1 | wdata : 0x12bd43ecf10ce2dd 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 4665: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x6530 | write = 0 | wdata = 0x844096089e67fa69 | strb = 0xfe
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4715: uvm_test_top.env.agent.monitor [Monitor] addr : 0x6530 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 4715: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x6530 | write = 1 | wdata = 0x309270cd443a2d40 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4765: uvm_test_top.env.agent.monitor [Monitor] addr : 0x6530 | write : 1 | wdata : 0x309270cd443a2d40 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 4765: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x6530 | write = 1 | wdata = 0x2aac1308b3f63812 | strb = 0x3b
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4815: uvm_test_top.env.agent.monitor [Monitor] addr : 0x6530 | write : 1 | wdata : 0x2aac1308b3f63812 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 4815: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x6530 | write = 0 | wdata = 0x780e90f350d9e692 | strb = 0x1f
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4865: uvm_test_top.env.agent.monitor [Monitor] addr : 0x6530 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 4865: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x7760 | write = 1 | wdata = 0xb6f778a569b3885b | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4915: uvm_test_top.env.agent.monitor [Monitor] addr : 0x7760 | write : 1 | wdata : 0xb6f778a569b3885b 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 4915: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x7760 | write = 0 | wdata = 0xeaa9ba8d0a8b8423 | strb = 0xd3
+UVM_INFO ../tb/apb_monitor.sv(29) @ 4965: uvm_test_top.env.agent.monitor [Monitor] addr : 0x7760 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 4965: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x7760 | write = 1 | wdata = 0xd0c5fb38a4e0e252 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5015: uvm_test_top.env.agent.monitor [Monitor] addr : 0x7760 | write : 1 | wdata : 0xd0c5fb38a4e0e252 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 5015: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x7760 | write = 1 | wdata = 0x9d92524f7a4d985a | strb = 0xae
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5065: uvm_test_top.env.agent.monitor [Monitor] addr : 0x7760 | write : 1 | wdata : 0x9d92524f7a4d985a 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 5065: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x7760 | write = 0 | wdata = 0xa1541f83b7921453 | strb = 0x4e
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5115: uvm_test_top.env.agent.monitor [Monitor] addr : 0x7760 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 5115: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xeec0 | write = 1 | wdata = 0x1cb0a7a814ed61c6 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5165: uvm_test_top.env.agent.monitor [Monitor] addr : 0xeec0 | write : 1 | wdata : 0x1cb0a7a814ed61c6 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 5165: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xeec0 | write = 0 | wdata = 0xc7dd65b1e440672 | strb = 0x80
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5215: uvm_test_top.env.agent.monitor [Monitor] addr : 0xeec0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 5215: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xeec0 | write = 1 | wdata = 0x98e1e0cbc2da23d9 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5265: uvm_test_top.env.agent.monitor [Monitor] addr : 0xeec0 | write : 1 | wdata : 0x98e1e0cbc2da23d9 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 5265: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xeec0 | write = 1 | wdata = 0x4d2affc59073fa56 | strb = 0x16
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5315: uvm_test_top.env.agent.monitor [Monitor] addr : 0xeec0 | write : 1 | wdata : 0x4d2affc59073fa56 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 5315: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xeec0 | write = 0 | wdata = 0x3b04a3662d846796 | strb = 0x4
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5365: uvm_test_top.env.agent.monitor [Monitor] addr : 0xeec0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 5365: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x1768 | write = 1 | wdata = 0x6c206cfbf1d5ef94 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5415: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1768 | write : 1 | wdata : 0x6c206cfbf1d5ef94 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 5415: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x1768 | write = 0 | wdata = 0xd7d8a8e3d6ef3ab7 | strb = 0x54
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5465: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1768 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 5465: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x1768 | write = 1 | wdata = 0x27930d40b0cf60e2 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5515: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1768 | write : 1 | wdata : 0x27930d40b0cf60e2 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 5515: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x1768 | write = 1 | wdata = 0xd0a8db6b3d0a44c8 | strb = 0x8a
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5565: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1768 | write : 1 | wdata : 0xd0a8db6b3d0a44c8 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 5565: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x1768 | write = 0 | wdata = 0x6d38fac7a180c5b0 | strb = 0xaa
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5615: uvm_test_top.env.agent.monitor [Monitor] addr : 0x1768 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 5615: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xc8b0 | write = 1 | wdata = 0xd5f3dc6751a338ed | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5665: uvm_test_top.env.agent.monitor [Monitor] addr : 0xc8b0 | write : 1 | wdata : 0xd5f3dc6751a338ed 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 5665: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xc8b0 | write = 0 | wdata = 0x6bad71efb28609e7 | strb = 0x42
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5715: uvm_test_top.env.agent.monitor [Monitor] addr : 0xc8b0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 5715: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xc8b0 | write = 1 | wdata = 0x5c014884295ee2e5 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5765: uvm_test_top.env.agent.monitor [Monitor] addr : 0xc8b0 | write : 1 | wdata : 0x5c014884295ee2e5 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 5765: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xc8b0 | write = 1 | wdata = 0x648fe8cdb2eca27e | strb = 0xe1
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5815: uvm_test_top.env.agent.monitor [Monitor] addr : 0xc8b0 | write : 1 | wdata : 0x648fe8cdb2eca27e 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 5815: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xc8b0 | write = 0 | wdata = 0x679b61f981bfce80 | strb = 0xb7
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5865: uvm_test_top.env.agent.monitor [Monitor] addr : 0xc8b0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 5865: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xb3d8 | write = 1 | wdata = 0xf014566e69213fcc | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5915: uvm_test_top.env.agent.monitor [Monitor] addr : 0xb3d8 | write : 1 | wdata : 0xf014566e69213fcc 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 5915: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xb3d8 | write = 0 | wdata = 0xc64273a4a65389bf | strb = 0x4c
+UVM_INFO ../tb/apb_monitor.sv(29) @ 5965: uvm_test_top.env.agent.monitor [Monitor] addr : 0xb3d8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 5965: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xb3d8 | write = 1 | wdata = 0xa65d62292cea3fa | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6015: uvm_test_top.env.agent.monitor [Monitor] addr : 0xb3d8 | write : 1 | wdata : 0xa65d62292cea3fa 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 6015: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xb3d8 | write = 1 | wdata = 0x412760396290b798 | strb = 0x51
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6065: uvm_test_top.env.agent.monitor [Monitor] addr : 0xb3d8 | write : 1 | wdata : 0x412760396290b798 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 6065: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xb3d8 | write = 0 | wdata = 0xdf5e23bb145b403b | strb = 0x5e
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6115: uvm_test_top.env.agent.monitor [Monitor] addr : 0xb3d8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 6115: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x3fd0 | write = 1 | wdata = 0xe027211e81acc16c | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6165: uvm_test_top.env.agent.monitor [Monitor] addr : 0x3fd0 | write : 1 | wdata : 0xe027211e81acc16c 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 6165: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x3fd0 | write = 0 | wdata = 0xde0ec220cb1043d1 | strb = 0x5
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6215: uvm_test_top.env.agent.monitor [Monitor] addr : 0x3fd0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 6215: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x3fd0 | write = 1 | wdata = 0xc0739b3c813f41e | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6265: uvm_test_top.env.agent.monitor [Monitor] addr : 0x3fd0 | write : 1 | wdata : 0xc0739b3c813f41e 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 6265: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x3fd0 | write = 1 | wdata = 0x82d333944c841a99 | strb = 0x2a
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6315: uvm_test_top.env.agent.monitor [Monitor] addr : 0x3fd0 | write : 1 | wdata : 0x82d333944c841a99 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 6315: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x3fd0 | write = 0 | wdata = 0x2e9c228326eab39c | strb = 0x15
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6365: uvm_test_top.env.agent.monitor [Monitor] addr : 0x3fd0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 6365: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xe400 | write = 1 | wdata = 0xdb7b8b1d6a127182 | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6415: uvm_test_top.env.agent.monitor [Monitor] addr : 0xe400 | write : 1 | wdata : 0xdb7b8b1d6a127182 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 6415: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xe400 | write = 0 | wdata = 0xb65aa25e5db155f4 | strb = 0x38
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6465: uvm_test_top.env.agent.monitor [Monitor] addr : 0xe400 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 6465: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xe400 | write = 1 | wdata = 0x4d722d0903757b9e | strb = 0xff
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6515: uvm_test_top.env.agent.monitor [Monitor] addr : 0xe400 | write : 1 | wdata : 0x4d722d0903757b9e 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 6515: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xe400 | write = 1 | wdata = 0xafd09e42ce5e8f7d | strb = 0xad
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6565: uvm_test_top.env.agent.monitor [Monitor] addr : 0xe400 | write : 1 | wdata : 0xafd09e42ce5e8f7d 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 6565: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xe400 | write = 0 | wdata = 0x655a2942f2105100 | strb = 0xda
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6615: uvm_test_top.env.agent.monitor [Monitor] addr : 0xe400 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 6615: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x55e8 | write = 0 | wdata = 0x6572b1315b210e71 | strb = 0xa7
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6665: uvm_test_top.env.agent.monitor [Monitor] addr : 0x55e8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 6665: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x4a658747 | write = 1 | wdata = 0xd61c3d2eab41d7e2 | strb = 0xa0
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6715: uvm_test_top.env.agent.monitor [Monitor] addr : 0x4a658747 | write : 1 | wdata : 0xd61c3d2eab41d7e2 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 6715: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x5f90 | write = 1 | wdata = 0xb1fdc7d3426594e0 | strb = 0x99
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6765: uvm_test_top.env.agent.monitor [Monitor] addr : 0x5f90 | write : 1 | wdata : 0xb1fdc7d3426594e0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 6765: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x5f90 | write = 0 | wdata = 0x8b3a1c1a9e274846 | strb = 0xb7
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6815: uvm_test_top.env.agent.monitor [Monitor] addr : 0x5f90 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 6815: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x9cf15d96 | write = 1 | wdata = 0xe6269588a238fb81 | strb = 0x8
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6865: uvm_test_top.env.agent.monitor [Monitor] addr : 0x9cf15d96 | write : 1 | wdata : 0xe6269588a238fb81 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 6865: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xe278 | write = 0 | wdata = 0xdd7acf4900b692a6 | strb = 0xd9
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6915: uvm_test_top.env.agent.monitor [Monitor] addr : 0xe278 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 6915: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x55e8 | write = 1 | wdata = 0x4ef89c0f8c93fd6d | strb = 0xd5
+UVM_INFO ../tb/apb_monitor.sv(29) @ 6965: uvm_test_top.env.agent.monitor [Monitor] addr : 0x55e8 | write : 1 | wdata : 0x4ef89c0f8c93fd6d 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 6965: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x8fd1f965 | write = 1 | wdata = 0x5864da4a214323a0 | strb = 0x46
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7015: uvm_test_top.env.agent.monitor [Monitor] addr : 0x8fd1f965 | write : 1 | wdata : 0x5864da4a214323a0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 7015: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xc638 | write = 1 | wdata = 0xb257367129bd7229 | strb = 0x83
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7065: uvm_test_top.env.agent.monitor [Monitor] addr : 0xc638 | write : 1 | wdata : 0xb257367129bd7229 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 7065: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xcd58 | write = 0 | wdata = 0x7ba01461d4f4f5f3 | strb = 0x73
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7115: uvm_test_top.env.agent.monitor [Monitor] addr : 0xcd58 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 7115: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xbb14d598 | write = 0 | wdata = 0x897b2182ecd17120 | strb = 0xed
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7165: uvm_test_top.env.agent.monitor [Monitor] addr : 0xbb14d598 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 7165: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xb938 | write = 0 | wdata = 0xef67f88a86156b21 | strb = 0x92
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7215: uvm_test_top.env.agent.monitor [Monitor] addr : 0xb938 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 7215: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x5f90 | write = 1 | wdata = 0xbd705035d031529d | strb = 0x15
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7265: uvm_test_top.env.agent.monitor [Monitor] addr : 0x5f90 | write : 1 | wdata : 0xbd705035d031529d 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 7265: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x6de0 | write = 1 | wdata = 0x4e9ef42c36fb64ca | strb = 0xe7
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7315: uvm_test_top.env.agent.monitor [Monitor] addr : 0x6de0 | write : 1 | wdata : 0x4e9ef42c36fb64ca 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 7315: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x5f90 | write = 0 | wdata = 0x73850477861d170a | strb = 0xf3
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7365: uvm_test_top.env.agent.monitor [Monitor] addr : 0x5f90 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 7365: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xb938 | write = 0 | wdata = 0x2c37f8e7399cdb88 | strb = 0x2b
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7415: uvm_test_top.env.agent.monitor [Monitor] addr : 0xb938 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 7415: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x55e8 | write = 0 | wdata = 0x19e84bd862e9ee1d | strb = 0xc8
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7465: uvm_test_top.env.agent.monitor [Monitor] addr : 0x55e8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 7465: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x5f90 | write = 1 | wdata = 0xbed22afcb45c604a | strb = 0xae
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7515: uvm_test_top.env.agent.monitor [Monitor] addr : 0x5f90 | write : 1 | wdata : 0xbed22afcb45c604a 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 7515: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x575b8a92 | write = 0 | wdata = 0xf2c53c38ab7cba27 | strb = 0x21
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7565: uvm_test_top.env.agent.monitor [Monitor] addr : 0x575b8a92 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 7565: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xb938 | write = 0 | wdata = 0x8d65c34944084cdc | strb = 0x56
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7615: uvm_test_top.env.agent.monitor [Monitor] addr : 0xb938 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 7615: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xb938 | write = 1 | wdata = 0x42acf86d28c5ff9 | strb = 0x83
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7665: uvm_test_top.env.agent.monitor [Monitor] addr : 0xb938 | write : 1 | wdata : 0x42acf86d28c5ff9 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 7665: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xb938 | write = 1 | wdata = 0xff7bedbecaefbf0 | strb = 0x62
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7715: uvm_test_top.env.agent.monitor [Monitor] addr : 0xb938 | write : 1 | wdata : 0xff7bedbecaefbf0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 7715: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x6de0 | write = 1 | wdata = 0x2c82241d1633015 | strb = 0x8a
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7765: uvm_test_top.env.agent.monitor [Monitor] addr : 0x6de0 | write : 1 | wdata : 0x2c82241d1633015 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 7765: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x6de0 | write = 1 | wdata = 0x7211f32b829ac85a | strb = 0x51
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7815: uvm_test_top.env.agent.monitor [Monitor] addr : 0x6de0 | write : 1 | wdata : 0x7211f32b829ac85a 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 7815: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x5538c15c | write = 0 | wdata = 0x4c303d8eaa05cd01 | strb = 0xb6
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7865: uvm_test_top.env.agent.monitor [Monitor] addr : 0x5538c15c | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 7865: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x7acaa7a6 | write = 1 | wdata = 0xfe6bc664ed24a076 | strb = 0xac
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7915: uvm_test_top.env.agent.monitor [Monitor] addr : 0x7acaa7a6 | write : 1 | wdata : 0xfe6bc664ed24a076 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 7915: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xb938 | write = 0 | wdata = 0x7950031cf370c2fb | strb = 0xac
+UVM_INFO ../tb/apb_monitor.sv(29) @ 7965: uvm_test_top.env.agent.monitor [Monitor] addr : 0xb938 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 7965: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xcd58 | write = 0 | wdata = 0x84dbdfcb42938273 | strb = 0x44
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8015: uvm_test_top.env.agent.monitor [Monitor] addr : 0xcd58 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 8015: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x917a7ce | write = 0 | wdata = 0x5185d26f95daee5a | strb = 0xd2
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8065: uvm_test_top.env.agent.monitor [Monitor] addr : 0x917a7ce | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 8065: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xcd58 | write = 0 | wdata = 0x2b6fa2d36fdb3c74 | strb = 0x8b
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8115: uvm_test_top.env.agent.monitor [Monitor] addr : 0xcd58 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 8115: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xcd58 | write = 1 | wdata = 0x29970735eaeaec9d | strb = 0x33
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8165: uvm_test_top.env.agent.monitor [Monitor] addr : 0xcd58 | write : 1 | wdata : 0x29970735eaeaec9d 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 8165: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xc638 | write = 0 | wdata = 0xb6b884c3d4eea5da | strb = 0x37
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8215: uvm_test_top.env.agent.monitor [Monitor] addr : 0xc638 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 8215: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xa487e952 | write = 1 | wdata = 0xd181f52dd4b4663d | strb = 0x69
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8265: uvm_test_top.env.agent.monitor [Monitor] addr : 0xa487e952 | write : 1 | wdata : 0xd181f52dd4b4663d 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 8265: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xcd58 | write = 0 | wdata = 0x4d51339bf82936b6 | strb = 0x6b
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8315: uvm_test_top.env.agent.monitor [Monitor] addr : 0xcd58 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 8315: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x30ccb5b9 | write = 1 | wdata = 0xa733e53652dfaf12 | strb = 0x40
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8365: uvm_test_top.env.agent.monitor [Monitor] addr : 0x30ccb5b9 | write : 1 | wdata : 0xa733e53652dfaf12 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 8365: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x209c0efd | write = 1 | wdata = 0x56ac749f8f0f208 | strb = 0xbd
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8415: uvm_test_top.env.agent.monitor [Monitor] addr : 0x209c0efd | write : 1 | wdata : 0x56ac749f8f0f208 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 8415: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x5f90 | write = 0 | wdata = 0x938a10639c59a59 | strb = 0xaa
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8465: uvm_test_top.env.agent.monitor [Monitor] addr : 0x5f90 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 8465: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xcd58 | write = 1 | wdata = 0x5b9a7e5e95e2ca52 | strb = 0x44
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8515: uvm_test_top.env.agent.monitor [Monitor] addr : 0xcd58 | write : 1 | wdata : 0x5b9a7e5e95e2ca52 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 8515: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xb938 | write = 0 | wdata = 0x7b5b31002bd32c6 | strb = 0xdc
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8565: uvm_test_top.env.agent.monitor [Monitor] addr : 0xb938 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 8565: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x42a1ed90 | write = 0 | wdata = 0xf43072524892edf7 | strb = 0x8
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8615: uvm_test_top.env.agent.monitor [Monitor] addr : 0x42a1ed90 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 8615: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xe933f8d8 | write = 0 | wdata = 0x4ac41bc74d180845 | strb = 0x83
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8665: uvm_test_top.env.agent.monitor [Monitor] addr : 0xe933f8d8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 8665: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xc638 | write = 0 | wdata = 0xd917217e753c7cf | strb = 0x15
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8715: uvm_test_top.env.agent.monitor [Monitor] addr : 0xc638 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 8715: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xcd58 | write = 1 | wdata = 0x23ad2733f7b2fd8e | strb = 0x61
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8765: uvm_test_top.env.agent.monitor [Monitor] addr : 0xcd58 | write : 1 | wdata : 0x23ad2733f7b2fd8e 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 8765: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x55e8 | write = 1 | wdata = 0x44ff5c75f11c49b4 | strb = 0x93
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8815: uvm_test_top.env.agent.monitor [Monitor] addr : 0x55e8 | write : 1 | wdata : 0x44ff5c75f11c49b4 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 8815: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xcd58 | write = 0 | wdata = 0x2ece9d5e0cc8c26d | strb = 0x4f
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8865: uvm_test_top.env.agent.monitor [Monitor] addr : 0xcd58 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 8865: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xc638 | write = 0 | wdata = 0xd7191c17119f11d3 | strb = 0xeb
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8915: uvm_test_top.env.agent.monitor [Monitor] addr : 0xc638 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 8915: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xe278 | write = 1 | wdata = 0x23053f7b9ddbd383 | strb = 0xa0
+UVM_INFO ../tb/apb_monitor.sv(29) @ 8965: uvm_test_top.env.agent.monitor [Monitor] addr : 0xe278 | write : 1 | wdata : 0x23053f7b9ddbd383 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 8965: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xf3a6d769 | write = 1 | wdata = 0xa69dd0f60189107d | strb = 0x84
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9015: uvm_test_top.env.agent.monitor [Monitor] addr : 0xf3a6d769 | write : 1 | wdata : 0xa69dd0f60189107d 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 9015: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x6de0 | write = 0 | wdata = 0x2cfa56caf0608d6f | strb = 0x1
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9065: uvm_test_top.env.agent.monitor [Monitor] addr : 0x6de0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 9065: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x55e8 | write = 1 | wdata = 0x6a6dffdda726b54e | strb = 0x39
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9115: uvm_test_top.env.agent.monitor [Monitor] addr : 0x55e8 | write : 1 | wdata : 0x6a6dffdda726b54e 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 9115: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xe278 | write = 0 | wdata = 0xd9c79c0b9d72c140 | strb = 0xc0
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9165: uvm_test_top.env.agent.monitor [Monitor] addr : 0xe278 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 9165: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xe278 | write = 0 | wdata = 0xa62ffad231b0725a | strb = 0xf
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9215: uvm_test_top.env.agent.monitor [Monitor] addr : 0xe278 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 9215: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x5f90 | write = 1 | wdata = 0x426dab6039ed3965 | strb = 0x6f
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9265: uvm_test_top.env.agent.monitor [Monitor] addr : 0x5f90 | write : 1 | wdata : 0x426dab6039ed3965 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 9265: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x5f90 | write = 1 | wdata = 0x7ed79a3baaf4ae3c | strb = 0x4c
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9315: uvm_test_top.env.agent.monitor [Monitor] addr : 0x5f90 | write : 1 | wdata : 0x7ed79a3baaf4ae3c 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 9315: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xe278 | write = 0 | wdata = 0xb892c78b8f274fda | strb = 0xf7
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9365: uvm_test_top.env.agent.monitor [Monitor] addr : 0xe278 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 9365: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xcd58 | write = 1 | wdata = 0xbf54a6c97f521bc1 | strb = 0x59
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9415: uvm_test_top.env.agent.monitor [Monitor] addr : 0xcd58 | write : 1 | wdata : 0xbf54a6c97f521bc1 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 9415: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x7be0 | write = 1 | wdata = 0x786e56eb5d9cc646 | strb = 0xb6
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9465: uvm_test_top.env.agent.monitor [Monitor] addr : 0x7be0 | write : 1 | wdata : 0x786e56eb5d9cc646 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 9465: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x94cc6fc9 | write = 1 | wdata = 0x48bed1e4fc48f42f | strb = 0x28
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9515: uvm_test_top.env.agent.monitor [Monitor] addr : 0x94cc6fc9 | write : 1 | wdata : 0x48bed1e4fc48f42f 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 9515: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x55e8 | write = 0 | wdata = 0xbf91027013f8fe7f | strb = 0x72
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9565: uvm_test_top.env.agent.monitor [Monitor] addr : 0x55e8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 9565: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x6de0 | write = 0 | wdata = 0x98e9631216562935 | strb = 0x78
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9615: uvm_test_top.env.agent.monitor [Monitor] addr : 0x6de0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 9615: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x6de0 | write = 0 | wdata = 0x9a62af67b801f98d | strb = 0xf2
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9665: uvm_test_top.env.agent.monitor [Monitor] addr : 0x6de0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 9665: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xe278 | write = 1 | wdata = 0xdcfb8b22c291cc5a | strb = 0xdd
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9715: uvm_test_top.env.agent.monitor [Monitor] addr : 0xe278 | write : 1 | wdata : 0xdcfb8b22c291cc5a 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 9715: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x5f90 | write = 1 | wdata = 0x80cbcf35a5f0e38e | strb = 0x33
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9765: uvm_test_top.env.agent.monitor [Monitor] addr : 0x5f90 | write : 1 | wdata : 0x80cbcf35a5f0e38e 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 9765: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xc638 | write = 0 | wdata = 0x843bfc1ace1b9a96 | strb = 0xd0
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9815: uvm_test_top.env.agent.monitor [Monitor] addr : 0xc638 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 9815: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x6de0 | write = 0 | wdata = 0x505a13587d5a7544 | strb = 0xb
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9865: uvm_test_top.env.agent.monitor [Monitor] addr : 0x6de0 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 9865: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xc638 | write = 1 | wdata = 0xf1c9f3f29e366548 | strb = 0x60
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9915: uvm_test_top.env.agent.monitor [Monitor] addr : 0xc638 | write : 1 | wdata : 0xf1c9f3f29e366548 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 9915: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xb938 | write = 0 | wdata = 0x11de790d417d385a | strb = 0xd2
+UVM_INFO ../tb/apb_monitor.sv(29) @ 9965: uvm_test_top.env.agent.monitor [Monitor] addr : 0xb938 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 9965: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x67cd79ea | write = 0 | wdata = 0x4a2860d9033344ba | strb = 0x8d
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10015: uvm_test_top.env.agent.monitor [Monitor] addr : 0x67cd79ea | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 10015: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xc638 | write = 1 | wdata = 0xbdf50e693c56f363 | strb = 0xaf
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10065: uvm_test_top.env.agent.monitor [Monitor] addr : 0xc638 | write : 1 | wdata : 0xbdf50e693c56f363 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 10065: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x5f90 | write = 0 | wdata = 0xd35bdd621c5571e1 | strb = 0x49
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10115: uvm_test_top.env.agent.monitor [Monitor] addr : 0x5f90 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 10115: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xc638 | write = 1 | wdata = 0x83a97e8447617372 | strb = 0x54
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10165: uvm_test_top.env.agent.monitor [Monitor] addr : 0xc638 | write : 1 | wdata : 0x83a97e8447617372 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 10165: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x55e8 | write = 1 | wdata = 0x84baf2be90821232 | strb = 0x3b
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10215: uvm_test_top.env.agent.monitor [Monitor] addr : 0x55e8 | write : 1 | wdata : 0x84baf2be90821232 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 10215: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x7be0 | write = 1 | wdata = 0x7de491ce8b9605e7 | strb = 0x20
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10265: uvm_test_top.env.agent.monitor [Monitor] addr : 0x7be0 | write : 1 | wdata : 0x7de491ce8b9605e7 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 10265: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x167e0615 | write = 0 | wdata = 0x79e14bb1df34ea1b | strb = 0x4a
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10315: uvm_test_top.env.agent.monitor [Monitor] addr : 0x167e0615 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 10315: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x7be0 | write = 1 | wdata = 0x4c67af8fee67e41 | strb = 0x66
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10365: uvm_test_top.env.agent.monitor [Monitor] addr : 0x7be0 | write : 1 | wdata : 0x4c67af8fee67e41 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 10365: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0xe278 | write = 0 | wdata = 0x77259523f96c9b64 | strb = 0x3a
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10415: uvm_test_top.env.agent.monitor [Monitor] addr : 0xe278 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 10415: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x73f58755 | write = 0 | wdata = 0x37cb496fdad8902e | strb = 0x50
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10465: uvm_test_top.env.agent.monitor [Monitor] addr : 0x73f58755 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 10465: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x55e8 | write = 0 | wdata = 0x41a98e540a1a355f | strb = 0x3c
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10515: uvm_test_top.env.agent.monitor [Monitor] addr : 0x55e8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 10515: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x55e8 | write = 0 | wdata = 0x5b1c1f3a5be106e6 | strb = 0x6c
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10565: uvm_test_top.env.agent.monitor [Monitor] addr : 0x55e8 | write : 0 | wdata : 0x0 
+UVM_INFO ../tb/apb_b2b_driver.sv(19) @ 10565: uvm_test_top.env.agent.driver [apb_b2b_driver] B2B driving : addr = 0x6de0 | write = 1 | wdata = 0x1d6bccb624d5424d | strb = 0xcb
+UVM_INFO ../tb/apb_monitor.sv(29) @ 10615: uvm_test_top.env.agent.monitor [Monitor] addr : 0x6de0 | write : 1 | wdata : 0x1d6bccb624d5424d 
+UVM_INFO ../tb/apb_b2b_seq.sv(65) @ 10615: uvm_test_top.env.agent.sequencer@@seq [apb_b2b_seq] Back-to-Back Sequence Finished
+UVM_INFO ../tb/apb_test.sv(116) @ 10715: uvm_test_top [apb_b2b_test] Test run phase: seq done
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_objection.svh(1270) @ 10715: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO ../tb/apb_coverage.sv(157) @ 10715: uvm_test_top.env.cov [COV_SUMMARY] ------------FUNCTIONAL COVERAGE-----------
+UVM_INFO ../tb/apb_coverage.sv(158) @ 10715: uvm_test_top.env.cov [COV_SUMMARY] cg     (transfer coverage)  : 74.17 %
+UVM_INFO ../tb/apb_coverage.sv(159) @ 10715: uvm_test_top.env.cov [COV_SUMMARY] cg_b2b (back-to-back)       : 90.00 %
+UVM_INFO ../tb/apb_scoreboard.sv(85) @ 10715: uvm_test_top.env.scb [SCB_SUMMARY] ------------SCOREBOARD SUMMARY-----------
+UVM_INFO ../tb/apb_scoreboard.sv(86) @ 10715: uvm_test_top.env.scb [SCB_SUMMARY] Total Transfer :212
+UVM_INFO ../tb/apb_scoreboard.sv(87) @ 10715: uvm_test_top.env.scb [SCB_SUMMARY] Write/Read :114/98
+UVM_INFO ../tb/apb_scoreboard.sv(89) @ 10715: uvm_test_top.env.scb [SCB_SUMMARY] PSLVERR Check pass/fail:212/0
+UVM_INFO ../tb/apb_scoreboard.sv(90) @ 10715: uvm_test_top.env.scb [SCB_SUMMARY] Read data Check pass/fail :194/0
+UVM_INFO ../tb/apb_scoreboard.sv(91) @ 10715: uvm_test_top.env.scb [SCB_SUMMARY] Unchecked read bytes (never written) :89
+UVM_INFO ../tb/apb_base_test.sv(49) @ 10715: uvm_test_top [apb_b2b_test] ---------------------------------------
+UVM_INFO ../tb/apb_base_test.sv(50) @ 10715: uvm_test_top [apb_b2b_test] ----           TEST PASS           ----
+UVM_INFO ../tb/apb_base_test.sv(51) @ 10715: uvm_test_top [apb_b2b_test] ---------------------------------------
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_report_catcher.svh(705) @ 10715: reporter [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO /usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_report_server.svh(894) @ 10715: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :  455
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[COV_SUMMARY]     3
+[Monitor]   212
+[RNTST]     1
+[SCB_SUMMARY]     6
+[TB_TOP]     1
+[TEST_DONE]     1
+[TIMOUTSET]     1
+[UVM/RELNOTES]     1
+[UVM/REPORT/CATCHER]     1
+[apb_agent]     1
+[apb_b2b_driver]   214
+[apb_b2b_seq]     2
+[apb_b2b_test]     6
+[apb_env]     2
+[apb_mon]     2
+[apb_sequencer]     1
+
+$finish called from file "/usr/synopsys/vcs-L-2016.06//etc/uvm-1.2/base/uvm_root.svh", line 527.
+$finish at simulation time                10715
+
+---------------------------------------------------------------------------
+VCS Coverage Metrics: during simulation line, cond, tgl was monitored
+---------------------------------------------------------------------------
+
+ Coverage status: End of All Coverages ...
+
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 10715
+CPU Time:      0.590 seconds;       Data structure size:   0.4Mb
+Sun Oct  4 21:12:15 2026

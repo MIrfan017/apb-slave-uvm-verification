@@ -1,0 +1,29 @@
+<session version="1.1" release="L-2016.06" timestp="2026-10-04 13:12:15 GMT">
+  <hvp>
+    <datadef>
+      <metdef name="Line" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Cond" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Toggle" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Assert" type="ratio" aggregator="average" builtin="1" />
+      <metdef name="Group" type="percent" aggregator="average" builtin="1" />
+    </datadef>
+  </hvp>
+  <old_coverage>
+  <scope type="top" name="top">
+    <metric name="Line" value="96/110" />
+    <metric name="Cond" value="141/143" />
+    <metric name="Toggle" value="5156/5166" />
+    <metric name="Group" value="95%" />
+  </scope>
+  <scope type="instance" name="top">
+  </scope>
+  <scope type="group" name="top">
+    <scope type="group" name="apb_pkg::apb_coverage::cg">
+      <metric name="Group" value="90%" />
+    </scope>
+    <scope type="group" name="apb_pkg::apb_coverage::cg_b2b">
+      <metric name="Group" value="100%" />
+    </scope>
+  </scope>
+  </old_coverage>
+</session>

@@ -1,0 +1,231 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "uvm_custom_install_recording": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "apb_pkg": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "vcs_paramclassrepository": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "_vcs_unit__111909586": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "_vcs_DPI_package": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "err_gen": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "std": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "apb_fsm": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "_vcs_msglog": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "uvm_pkg": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "apb_wrapper": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "apb_if": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        },
+        "tb_top": {
+            "Compiled": "Yes",
+            "Compiled Times": 1
+        }
+    },
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "objs/amcQw_d.o",
+            "bytes": 8921,
+            "mode": 4,
+            "checksum": 0
+        },
+        "uM9F1_d": {
+            "mod": "_vcs_DPI_package",
+            "out": "uM9F1_d.o",
+            "archive": "archive.0/_7539_archive_1.a",
+            "bytes": 9927,
+            "mode": 4,
+            "checksum": 0
+        },
+        "zr7M1_d": {
+            "mod": "uvm_pkg",
+            "out": "zr7M1_d.o",
+            "archive": "archive.0/_7539_archive_1.a",
+            "bytes": 7034328,
+            "mode": 4,
+            "checksum": 0
+        },
+        "nhiwz_d": {
+            "mod": "uvm_custom_install_recording",
+            "out": "nhiwz_d.o",
+            "archive": "archive.0/_7539_archive_1.a",
+            "bytes": 29171,
+            "mode": 4,
+            "checksum": 0
+        },
+        "hEeZs_d": {
+            "mod": "vcs_paramclassrepository",
+            "out": "hEeZs_d.o",
+            "archive": "archive.0/_7539_archive_1.a",
+            "bytes": 7277707,
+            "mode": 4,
+            "checksum": 0
+        },
+        "zQBzV_d": {
+            "mod": "_vcs_msglog",
+            "out": "zQBzV_d.o",
+            "archive": "archive.0/_7539_archive_1.a",
+            "bytes": 10799,
+            "mode": 4,
+            "checksum": 0
+        },
+        "jdPWL_d": {
+            "mod": "tb_top",
+            "out": "jdPWL_d.o",
+            "archive": "archive.0/_7539_archive_1.a",
+            "bytes": 20983,
+            "mode": 4,
+            "checksum": 0
+        },
+        "L0K7q_d": {
+            "mod": "apb_fsm",
+            "out": "L0K7q_d.o",
+            "archive": "archive.0/_7539_archive_1.a",
+            "bytes": 21211,
+            "mode": 4,
+            "checksum": 0
+        },
+        "hNLvh_d": {
+            "mod": "_vcs_unit__111909586",
+            "out": "hNLvh_d.o",
+            "archive": "archive.0/_7539_archive_1.a",
+            "bytes": 298835,
+            "mode": 4,
+            "checksum": 0
+        },
+        "EtDq0_d": {
+            "mod": "apb_wrapper",
+            "out": "EtDq0_d.o",
+            "archive": "archive.0/_7539_archive_1.a",
+            "bytes": 273123,
+            "mode": 4,
+            "checksum": 0
+        },
+        "reYIK_d": {
+            "mod": "std",
+            "out": "reYIK_d.o",
+            "archive": "archive.0/_7539_archive_1.a",
+            "bytes": 42922,
+            "mode": 4,
+            "checksum": 0
+        },
+        "f6b33_d": {
+            "mod": "err_gen",
+            "out": "f6b33_d.o",
+            "archive": "archive.0/_7539_archive_1.a",
+            "bytes": 12513,
+            "mode": 4,
+            "checksum": 0
+        },
+        "d9vZk_d": {
+            "mod": "apb_if",
+            "out": "d9vZk_d.o",
+            "archive": "archive.0/_7539_archive_1.a",
+            "bytes": 14456,
+            "mode": 4,
+            "checksum": 0
+        },
+        "xtRSS_d": {
+            "mod": "apb_pkg",
+            "out": "xtRSS_d.o",
+            "archive": "archive.0/_7539_archive_1.a",
+            "bytes": 434520,
+            "mode": 4,
+            "checksum": 0
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.0/_7539_archive_1.a",
+            "objects": [
+                [
+                    "hEeZs_d.o",
+                    7277707
+                ],
+                [
+                    "uM9F1_d.o",
+                    9927
+                ],
+                [
+                    "hNLvh_d.o",
+                    298835
+                ],
+                [
+                    "reYIK_d.o",
+                    42922
+                ],
+                [
+                    "zr7M1_d.o",
+                    7034328
+                ],
+                [
+                    "zQBzV_d.o",
+                    10799
+                ],
+                [
+                    "nhiwz_d.o",
+                    29171
+                ],
+                [
+                    "L0K7q_d.o",
+                    21211
+                ],
+                [
+                    "f6b33_d.o",
+                    12513
+                ],
+                [
+                    "EtDq0_d.o",
+                    273123
+                ],
+                [
+                    "d9vZk_d.o",
+                    14456
+                ],
+                [
+                    "xtRSS_d.o",
+                    434520
+                ],
+                [
+                    "jdPWL_d.o",
+                    20983
+                ]
+            ],
+            "size": 15480495
+        }
+    ],
+    "reusePaths": {}
+}
