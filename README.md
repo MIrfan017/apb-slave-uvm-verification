@@ -16,8 +16,6 @@ back-to-back transfers, and collects functional and code coverage.
 6. [Project Structure](#project-structure)
 7. [How to Run](#how-to-run)
 8. [Results](#results)
-9. [Known Limitations and Future Work](#known-limitations-and-future-work)
-
 ---
 
 ## Overview
@@ -246,11 +244,3 @@ The percentages above are for each test alone. Different tests hit different bin
 - The DUT reaches **100 % line coverage**.
 
 ---
-
-## Known Limitations and Future Work
-
-- No SystemVerilog Assertions (SVA) yet. The `ASSERT` column in the code coverage report is empty.
-- No reset-in-the-middle-of-a-transfer test.
-- Functional coverage is not closed yet. Planned: more directed sequences for the missing bins (strobe lanes, boundary addresses, memory rows).
-- The master side does not add random wait states or `PSTRB` corner cases beyond the current sequences.
-- The scoreboard read-data counters need cleanup so the pass/fail numbers are exact.
